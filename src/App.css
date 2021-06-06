@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap");
+
 .App {
   text-align: center;
+  font-family: "Exo", sans-serif;
 }
 
 .App-logo {
@@ -35,4 +38,19 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.item-enter {
+  opacity: 0;
+}
+.item-enter-active {
+  opacity: 1;
+  transition: opacity 5000ms ease-in;
+}
+.item-exit {
+  opacity: 1;
+}
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 5000ms ease-in;
 }
