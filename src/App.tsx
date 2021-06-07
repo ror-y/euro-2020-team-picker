@@ -113,7 +113,7 @@ function App() {
             />
           )}
 
-          {mode === Modes.PromptToSave && <GenerateImg />}
+          {mode === Modes.PromptToSave && <GenerateImg {...{ setMode }} />}
         </PitchAndSidebarContainer>
       )}
     </div>

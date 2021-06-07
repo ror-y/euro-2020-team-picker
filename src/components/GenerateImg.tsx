@@ -1,11 +1,12 @@
 import * as htmlToImage from "html-to-image";
 import styled from "styled-components";
+import { Modes } from "../types";
 
 /**
  * Convert HTML element to image.
  */
 const getImage = () => {
-  var node = document.getElementById("capture") as HTMLElement;
+  const node = document.getElementById("capture") as HTMLElement;
   htmlToImage
     .toPng(node)
     .then(function (dataUrl) {
@@ -32,11 +33,18 @@ const Container = styled.div`
   }
 `;
 
-export const GenerateImg = () => {
+export const GenerateImg = ({ setMode }: { setMode: (val: Modes) => any }) => {
   return (
     <Container>
       <span>Team Chosen! 🍻</span>
-      <button onClick={getImage}>Generate Image</button>
+      <button
+        onClick={() => {
+          setMode(Modes.Finished);
+          getImage();
+        }}
+      >
+        Generate Image
+      </button>
     </Container>
   );
 };

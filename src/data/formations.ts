@@ -1,4 +1,4 @@
-import { Formation, FormationItem, Positions } from "../types";
+import { Formation, FormationItem } from "../types";
 import {
   GOALKEEPER,
   FULL_BACK_LEFT,
@@ -32,6 +32,22 @@ const applyIds = (
 
 export const formations: Formation[] = [
   {
+    name: "433",
+    positions: applyIds([
+      GOALKEEPER,
+      FULL_BACK_LEFT,
+      CENTRE_BACK_LEFT,
+      CENTRE_BACK_RIGHT,
+      FULL_BACK_RIGHT,
+      MIDFIELDER_CENTRE_LEFT_EXTREME,
+      MIDFIELDER_CENTRE_CENTRE,
+      MIDFIELDER_CENTRE_RIGHT_EXTREME,
+      FORWARD_LEFT_EXTREME,
+      FORWARD_CENTRE,
+      FORWARD_RIGHT_EXTREME,
+    ]),
+  },
+  {
     name: "442",
     positions: applyIds([
       GOALKEEPER,
@@ -48,19 +64,19 @@ export const formations: Formation[] = [
     ]),
   },
   {
-    name: "433",
+    name: "352",
     positions: applyIds([
       GOALKEEPER,
-      FULL_BACK_LEFT,
-      CENTRE_BACK_LEFT,
-      CENTRE_BACK_RIGHT,
-      FULL_BACK_RIGHT,
+      CENTRE_BACK_LEFT_EXTREME,
+      CENTRE_BACK_CENTRE,
+      CENTRE_BACK_RIGHT_EXTREME,
+      MIDFIELDER_LEFT,
       MIDFIELDER_CENTRE_LEFT_EXTREME,
       MIDFIELDER_CENTRE_CENTRE,
       MIDFIELDER_CENTRE_RIGHT_EXTREME,
-      FORWARD_LEFT_EXTREME,
-      FORWARD_CENTRE,
-      FORWARD_RIGHT_EXTREME,
+      MIDFIELDER_RIGHT,
+      FORWARD_LEFT,
+      FORWARD_RIGHT,
     ]),
   },
 ];

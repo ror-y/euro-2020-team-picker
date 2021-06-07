@@ -34,9 +34,10 @@ export enum Modes {
   Default = "Default",
   EditingPosition = "EditingPosition",
   PromptToSave = "PromptToSave",
+  Finished = "Finished",
 }
 
-type TeamName = "England" | "Germany" | "North Macedonia";
+type TeamName = "England" | "Germany" | "North Macedonia" | "France";
 
 export interface TeamFromWiki {
   name: TeamName;

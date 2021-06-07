@@ -7,7 +7,6 @@ export const germany: TeamFromWiki = {
     shirtNumberColor: "rgb(23, 21, 19)",
     shirtRimColor: "rgb(212, 29, 42)",
     titleColor: "rgb(23, 21, 19)",
-    // titleColor: "rgb(254, 198, 48)",
   },
   players: [
     {

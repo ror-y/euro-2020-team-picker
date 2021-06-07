@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { TeamFromWiki } from "../types";
 
 interface Props {
   shirtMainColor: string;

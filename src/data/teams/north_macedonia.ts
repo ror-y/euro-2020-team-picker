@@ -120,7 +120,7 @@ export const northMacedonia: TeamFromWiki = {
       position: Positions.FW,
     },
     {
-      name: "Goran Pandev (Captain)",
+      name: "Goran Pandev",
       squadNumber: 10,
       position: Positions.FW,
     },

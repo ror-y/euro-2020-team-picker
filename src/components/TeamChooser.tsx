@@ -1,8 +1,9 @@
 import { england } from "../data/teams/england";
 import { germany } from "../data/teams/germany";
 import { northMacedonia } from "../data/teams/north_macedonia";
+import { france } from "../data/teams/france";
 import { TeamFromWiki } from "../types";
-const selectableTeams = [england, germany, northMacedonia];
+const selectableTeams = [england, germany, northMacedonia, france];
 
 export const TeamChooser = ({
   setSelectedTeam,
