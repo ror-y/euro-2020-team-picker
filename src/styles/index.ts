@@ -4,14 +4,22 @@ import { PlayerProps } from "../types";
 export const StyledPitch = styled.div`
   width: 600px;
   height: 800px;
-  background-color: green;
   position: relative;
+  background: linear-gradient(
+    to bottom,
+    green,
+    green 50%,
+    forestgreen 50%,
+    forestgreen
+  );
+  background-size: 100% 200px;
 `;
 
 interface ShirtProps {
   shirtNumberColor: string;
   shirtMainColor: string;
   shirtRimColor: string;
+  isActive: boolean;
 }
 
 export const StyledShirtNameContainer = styled.div<PlayerProps>`
@@ -23,11 +31,16 @@ export const StyledShirtNameContainer = styled.div<PlayerProps>`
   align-items: center;
   width: 50px;
   cursor: pointer;
+  transform: translateX(-24px);
 `;
 
 export const StyledShirt = styled.div<ShirtProps>`
-  width: 30px;
-  height: 30px;
+  width: 38px;
+  height: 38px;
+  min-height: 38px;
+  max-height: 38px;
+  min-width: 38px;
+  max-width: 38px;
   border-radius: 50%;
   background-color: ${({ shirtMainColor }) => shirtMainColor};
   border: 3px solid ${({ shirtRimColor }) => shirtRimColor};
@@ -36,6 +49,9 @@ export const StyledShirt = styled.div<ShirtProps>`
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: ${({ isActive }) =>
+    isActive ? "0px 0px 0px 8px rgba(255,255,255,0.5)" : ""};
+  font-size: 22px;
 `;
 
 export const StyledPitchPlayerName = styled.div`
@@ -44,6 +60,7 @@ export const StyledPitchPlayerName = styled.div`
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 8px;
+  font-size: 20px;
 `;
 
 export const PitchAndSidebarContainer = styled.div`

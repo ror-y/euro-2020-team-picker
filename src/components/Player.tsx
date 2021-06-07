@@ -19,6 +19,7 @@ export function Player({
   shirtMainColor,
   shirtNumberColor,
   shirtRimColor,
+  editingId,
 }: {
   id: number;
   x: number;
@@ -32,18 +33,23 @@ export function Player({
   shirtMainColor: string;
   shirtNumberColor: string;
   shirtRimColor: string;
+  editingId: number | null;
 }) {
   return (
-    <StyledShirtNameContainer {...{ x }} {...{ y }}>
+    <StyledShirtNameContainer
+      {...{ x }}
+      {...{ y }}
+      onClick={() => {
+        setMode(Modes.EditingPosition);
+        setFilteringPosition(type);
+        setEditingId(id);
+      }}
+    >
       <StyledShirt
         {...{ shirtMainColor }}
         {...{ shirtNumberColor }}
         {...{ shirtRimColor }}
-        onClick={() => {
-          setMode(Modes.EditingPosition);
-          setFilteringPosition(type);
-          setEditingId(id);
-        }}
+        isActive={id === editingId}
       >
         {squadNumber}
       </StyledShirt>

@@ -6,9 +6,9 @@ import { TeamChooser } from "./components/TeamChooser";
 import { FormationChooser } from "./components/FormationChooser";
 import { PlayerChooserMenu } from "./components/PlayerChooserMenu";
 import { BigTeamTitle } from "./components/BigTeamTitle";
+import { GenerateImg } from "./components/GenerateImg";
 import { formations } from "./data/formations";
 import { Formation, Positions, Modes, TeamFromWiki } from "./types";
-import * as htmlToImage from "html-to-image";
 import { PitchAndSidebarContainer, TitleAndPitch } from "./styles";
 import _ from "lodash";
 
@@ -39,7 +39,7 @@ function App() {
   /**
    * An ID which is required to map the player to the position on the pitch.
    */
-  const [editingId, setEditingId] = useState<number>();
+  const [editingId, setEditingId] = useState<number | null>(null);
 
   /**
    * If all 11 positions have been chosen, prompt to save and/or share.
@@ -50,25 +50,9 @@ function App() {
       11
     ) {
       setMode(Modes.PromptToSave);
+      setEditingId(null);
     }
   }, [selectedFormation]);
-
-  /**
-   * Convert HTML element to image.
-   */
-  const getImage = () => {
-    var node = document.getElementById("capture") as HTMLElement;
-    htmlToImage
-      .toPng(node)
-      .then(function (dataUrl) {
-        var img = new Image();
-        img.src = dataUrl;
-        document.body.appendChild(img);
-      })
-      .catch(function (error) {
-        console.error("oops, something went wrong!", error);
-      });
-  };
 
   /**
    * Reset state of pitch, for example if a new team is chosen.
@@ -76,6 +60,7 @@ function App() {
   const resetPitch = () => {
     setSelectedFormation(formations[0]);
     setMode(Modes.Default);
+    setEditingId(null);
   };
 
   return (
@@ -85,6 +70,7 @@ function App() {
         {...{ setMode }}
         {...{ selectedFormation }}
         {...{ setSelectedFormation }}
+        {...{ setEditingId }}
       />
 
       {selectedTeam && (
@@ -106,6 +92,7 @@ function App() {
                     {...{ type }}
                     {...{ setMode }}
                     {...{ setFilteringPosition }}
+                    {...{ editingId }}
                     {...{ setEditingId }}
                     shirtMainColor={selectedTeam.colors.shirtMainColor}
                     shirtNumberColor={selectedTeam.colors.shirtNumberColor}
@@ -126,9 +113,7 @@ function App() {
             />
           )}
 
-          {mode === Modes.PromptToSave && (
-            <button onClick={getImage}>get img</button>
-          )}
+          {mode === Modes.PromptToSave && <GenerateImg />}
         </PitchAndSidebarContainer>
       )}
     </div>

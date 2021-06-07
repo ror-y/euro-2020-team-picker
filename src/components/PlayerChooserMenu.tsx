@@ -1,4 +1,25 @@
+import styled from "styled-components";
 import { Player, Positions, Formation, TeamFromWiki } from "../types";
+
+const List = styled.ul`
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+`;
+
+const ListItem = styled.li`
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+`;
 
 export const PlayerChooserMenu = ({
   selectedTeam,
@@ -10,7 +31,7 @@ export const PlayerChooserMenu = ({
   selectedTeam: TeamFromWiki;
   filteringPosition: Positions | null;
   setSelectedFormation: (val: any) => any;
-  editingId: number | undefined;
+  editingId: number | null;
   selectedFormation: Formation;
 }) => {
   const isDisabled = (playerName: string) => {
@@ -35,18 +56,18 @@ export const PlayerChooserMenu = ({
   };
 
   return (
-    <ul>
+    <List>
       {selectedTeam.players.map((player) =>
         player.position === filteringPosition ? (
-          <li
+          <ListItem
             key={player.name}
             onClick={() => handleClick(player)}
             style={{ color: isDisabled(player.name) ? "grey" : "black" }}
           >
             {player.name}
-          </li>
+          </ListItem>
         ) : null
       )}
-    </ul>
+    </List>
   );
 };

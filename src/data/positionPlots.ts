@@ -2,7 +2,7 @@ import { Positions } from "../types";
 
 export const GOALKEEPER = {
   x: 50,
-  y: 90,
+  y: 87,
   type: Positions.GK,
 };
 

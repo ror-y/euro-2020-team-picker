@@ -3,6 +3,7 @@
 .App {
   text-align: center;
   font-family: "Exo", sans-serif;
+  padding: 20px;
 }
 
 .App-logo {
@@ -53,4 +54,10 @@
 .item-exit-active {
   opacity: 0;
   transition: opacity 5000ms ease-in;
+}
+
+select {
+  font-size: 30px;
+  margin: 10px;
+  padding: 10px;
 }
