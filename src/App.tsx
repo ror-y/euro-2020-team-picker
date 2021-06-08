@@ -8,7 +8,7 @@ import { PlayerChooserMenu } from "./components/PlayerChooserMenu";
 import { BigTeamTitle } from "./components/BigTeamTitle";
 import { GenerateImg } from "./components/GenerateImg";
 import { formations } from "./data/formations";
-import { Formation, Positions, Modes, TeamFromWiki } from "./types";
+import { Formation, Positions, Modes, Stages, TeamFromWiki } from "./types";
 import { PitchAndSidebarContainer, TitleAndPitch } from "./styles";
 import _ from "lodash";
 
@@ -26,9 +26,14 @@ function App() {
   );
 
   /**
-   * The state of the UI.
+   * The state of the pitch UI.
    */
   const [mode, setMode] = useState<Modes>(Modes.Default);
+
+  /**
+   * The stage of the overall menu UI.
+   */
+  const [stage, setStage] = useState<Stages>(Stages.PickCountry);
 
   /**
    * The position on the pitch to filter by, eg GK, RB.
@@ -65,20 +70,32 @@ function App() {
 
   return (
     <div className="App" id="App">
-      <TeamChooser {...{ setSelectedTeam }} {...{ resetPitch }} />
-      <FormationChooser
-        {...{ setMode }}
-        {...{ selectedFormation }}
-        {...{ setSelectedFormation }}
-        {...{ setEditingId }}
-      />
+      {stage === Stages.PickCountry && (
+        <TeamChooser
+          {...{ setSelectedTeam }}
+          {...{ resetPitch }}
+          {...{ setStage }}
+        />
+      )}
 
-      {selectedTeam && (
+      {stage === Stages.PickFormation && (
+        <FormationChooser
+          {...{ setMode }}
+          {...{ selectedFormation }}
+          {...{ setSelectedFormation }}
+          {...{ setEditingId }}
+          {...{ setStage }}
+        />
+      )}
+
+      {stage === Stages.PickTeamOnPitch && selectedTeam && (
         <PitchAndSidebarContainer>
           <TitleAndPitch id="capture">
-            <BigTeamTitle {...selectedTeam.colors}>
-              {selectedTeam.name}
-            </BigTeamTitle>
+            <BigTeamTitle
+              {...selectedTeam.colors}
+              title={selectedTeam.name}
+              formation={selectedFormation.name}
+            />
             <Pitch {...{ selectedFormation }}>
               {selectedFormation.positions.map(
                 ({ x, y, name, squadNumber, type, id }) => (

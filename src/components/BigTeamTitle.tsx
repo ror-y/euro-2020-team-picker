@@ -8,11 +8,28 @@ interface Props {
 }
 
 const Container = styled.div<Props>`
-  background-color: #fff;
   color: ${({ titleColor }) => titleColor};
-  font-size: 60px;
   text-transform: uppercase;
   font-weight: bold;
+`;
+
+const Title = styled.h2`
+  background-color: #fff;
+  position: absolute;
+  padding: 0 20px;
+  font-size: 40px;
+  margin: 0;
+  z-index: 10;
+`;
+
+const Formation = styled.p`
+  margin: 0;
+  font-size: 20px;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  padding: 0 10px;
+  z-index: 10;
 `;
 
 export const BigTeamTitle = ({
@@ -20,13 +37,15 @@ export const BigTeamTitle = ({
   shirtNumberColor,
   shirtRimColor,
   titleColor,
-  children,
+  title,
+  formation,
 }: {
   shirtMainColor: string;
   shirtNumberColor: string;
   shirtRimColor: string;
   titleColor: string;
-  children: any;
+  title: string;
+  formation: string;
 }) => {
   return (
     <Container
@@ -35,7 +54,8 @@ export const BigTeamTitle = ({
       {...{ shirtRimColor }}
       {...{ titleColor }}
     >
-      {children}
+      <Title>{title}</Title>
+      <Formation>{formation}</Formation>
     </Container>
   );
 };

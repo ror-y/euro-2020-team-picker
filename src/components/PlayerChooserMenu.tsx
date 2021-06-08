@@ -57,17 +57,18 @@ export const PlayerChooserMenu = ({
 
   return (
     <List>
-      {selectedTeam.players.map((player) =>
-        player.position === filteringPosition ? (
-          <ListItem
-            key={player.name}
-            onClick={() => handleClick(player)}
-            style={{ color: isDisabled(player.name) ? "grey" : "black" }}
-          >
-            {player.name}
-          </ListItem>
-        ) : null
-      )}
+      {filteringPosition &&
+        selectedTeam.players.map((player) =>
+          player.positions.includes(filteringPosition) ? (
+            <ListItem
+              key={player.name}
+              onClick={() => handleClick(player)}
+              style={{ color: isDisabled(player.name) ? "grey" : "black" }}
+            >
+              {player.name}
+            </ListItem>
+          ) : null
+        )}
     </List>
   );
 };

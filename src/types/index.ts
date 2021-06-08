@@ -26,7 +26,7 @@ export enum Positions {
 
 export interface Player {
   name: string;
-  position: Positions;
+  positions: Array<Positions>;
   squadNumber: number;
 }
 
@@ -35,6 +35,12 @@ export enum Modes {
   EditingPosition = "EditingPosition",
   PromptToSave = "PromptToSave",
   Finished = "Finished",
+}
+
+export enum Stages {
+  PickCountry = "PickCountry",
+  PickFormation = "PickFormation",
+  PickTeamOnPitch = "PickTeamOnPitch",
 }
 
 type TeamName = "England" | "Germany" | "North Macedonia" | "France";

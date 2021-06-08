@@ -7,12 +7,14 @@ export const StyledPitch = styled.div`
   position: relative;
   background: linear-gradient(
     to bottom,
-    green,
-    green 50%,
-    forestgreen 50%,
-    forestgreen
+    rgb(53, 106, 27),
+    rgb(53, 106, 27) 50%,
+    rgb(76, 134, 33) 50%,
+    rgb(76, 134, 33)
   );
-  background-size: 100% 200px;
+  background-size: 100% 160px;
+  border: 1px solid white;
+  outline: 20px solid rgb(76, 134, 33);
 `;
 
 interface ShirtProps {
@@ -69,4 +71,5 @@ export const PitchAndSidebarContainer = styled.div`
 
 export const TitleAndPitch = styled.div`
   border: 1px solid black;
+  position: relative;
 `;

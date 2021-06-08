@@ -32,7 +32,7 @@ const applyIds = (
 
 export const formations: Formation[] = [
   {
-    name: "433",
+    name: "4-3-3",
     positions: applyIds([
       GOALKEEPER,
       FULL_BACK_LEFT,
@@ -48,7 +48,7 @@ export const formations: Formation[] = [
     ]),
   },
   {
-    name: "442",
+    name: "4-4-2",
     positions: applyIds([
       GOALKEEPER,
       FULL_BACK_LEFT,
@@ -64,7 +64,7 @@ export const formations: Formation[] = [
     ]),
   },
   {
-    name: "352",
+    name: "3-5-2",
     positions: applyIds([
       GOALKEEPER,
       CENTRE_BACK_LEFT_EXTREME,
