@@ -5,6 +5,17 @@ import {
 } from "../styles";
 import { Positions, Modes } from "../types";
 import _ from "lodash";
+import styled from "styled-components";
+
+const Add = styled.div`
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  > * {
+    line-height: 1;
+  }
+`;
 
 export function Player({
   id,
@@ -51,8 +62,16 @@ export function Player({
         {...{ shirtRimColor }}
         isActive={id === editingId}
       >
-        {squadNumber}
+        {squadNumber ? (
+          squadNumber
+        ) : (
+          <Add>
+            <span>+</span>
+            <span>Add</span>
+          </Add>
+        )}
       </StyledShirt>
+
       <StyledPitchPlayerName>{_.last(name.split(" "))}</StyledPitchPlayerName>
     </StyledShirtNameContainer>
   );

@@ -14,7 +14,10 @@ export const StyledPitch = styled.div`
   );
   background-size: 100% 160px;
   border: 1px solid white;
-  outline: 20px solid rgb(76, 134, 33);
+`;
+
+export const Outline = styled.div`
+  border: 20px solid rgb(76, 134, 33);
 `;
 
 interface ShirtProps {
@@ -72,4 +75,31 @@ export const PitchAndSidebarContainer = styled.div`
 export const TitleAndPitch = styled.div`
   border: 1px solid black;
   position: relative;
+`;
+
+export const MenuList = styled.ul`
+  display: flex;
+  list-style-type: none;
+`;
+
+export const MenuListItem = styled.li`
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  height: 100px;
+  width: 100px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 250ms;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+`;
+
+export const MenuListText = styled.div`
+  text-transform: uppercase;
 `;

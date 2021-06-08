@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FlagIcon, FlagIconCode } from "react-flag-kit";
 
 interface Props {
   shirtMainColor: string;
@@ -20,16 +21,23 @@ const Title = styled.h2`
   font-size: 40px;
   margin: 0;
   z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > *:first-child {
+    margin-right: 10px;
+  }
 `;
 
 const Formation = styled.p`
   margin: 0;
   font-size: 20px;
   position: absolute;
-  right: 0;
+  right: 20px;
   background-color: #fff;
   padding: 0 10px;
   z-index: 10;
+  min-width: 70px;
 `;
 
 export const BigTeamTitle = ({
@@ -39,6 +47,7 @@ export const BigTeamTitle = ({
   titleColor,
   title,
   formation,
+  flagCode,
 }: {
   shirtMainColor: string;
   shirtNumberColor: string;
@@ -46,6 +55,7 @@ export const BigTeamTitle = ({
   titleColor: string;
   title: string;
   formation: string;
+  flagCode: FlagIconCode;
 }) => {
   return (
     <Container
@@ -54,7 +64,10 @@ export const BigTeamTitle = ({
       {...{ shirtRimColor }}
       {...{ titleColor }}
     >
-      <Title>{title}</Title>
+      <Title>
+        <FlagIcon code={flagCode} size={36} />
+        <div>{title}</div>
+      </Title>
       <Formation>{formation}</Formation>
     </Container>
   );

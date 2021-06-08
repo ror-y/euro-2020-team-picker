@@ -2,6 +2,7 @@ import { Positions, TeamFromWiki } from "../../types";
 
 export const england: TeamFromWiki = {
   name: "England",
+  flagCode: "GB-ENG",
   colors: {
     shirtMainColor: "rgb(255, 255, 255)",
     shirtNumberColor: "rgb(46, 90, 170)",

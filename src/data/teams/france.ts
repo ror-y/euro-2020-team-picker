@@ -2,6 +2,7 @@ import { Positions, TeamFromWiki } from "../../types";
 
 export const france: TeamFromWiki = {
   name: "France",
+  flagCode: "FR",
   colors: {
     shirtMainColor: "rgb(8, 57, 153)",
     shirtNumberColor: "rgb(255, 255, 255)",
@@ -112,12 +113,12 @@ export const france: TeamFromWiki = {
     {
       name: "Kylian Mbappé",
       squadNumber: 10,
-      positions: [Positions.FW],
+      positions: [Positions.MF, Positions.FW],
     },
     {
       name: "Ousmane Dembélé",
       squadNumber: 11,
-      positions: [Positions.FW],
+      positions: [Positions.MF, Positions.FW],
     },
     {
       name: "Karim Benzema",
@@ -127,7 +128,7 @@ export const france: TeamFromWiki = {
     {
       name: "Kingsley Coman",
       squadNumber: 20,
-      positions: [Positions.FW],
+      positions: [Positions.MF, Positions.FW],
     },
     {
       name: "Wissam Ben Yedder",

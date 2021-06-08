@@ -1,3 +1,5 @@
+import { FlagIconCode } from "react-flag-kit";
+
 export interface Coords {
   x: number;
   y: number;
@@ -47,6 +49,7 @@ type TeamName = "England" | "Germany" | "North Macedonia" | "France";
 
 export interface TeamFromWiki {
   name: TeamName;
+  flagCode: FlagIconCode;
   colors: {
     shirtMainColor: string;
     shirtNumberColor: string;

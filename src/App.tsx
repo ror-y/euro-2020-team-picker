@@ -9,8 +9,17 @@ import { BigTeamTitle } from "./components/BigTeamTitle";
 import { GenerateImg } from "./components/GenerateImg";
 import { formations } from "./data/formations";
 import { Formation, Positions, Modes, Stages, TeamFromWiki } from "./types";
-import { PitchAndSidebarContainer, TitleAndPitch } from "./styles";
+import { PitchAndSidebarContainer, TitleAndPitch, Outline } from "./styles";
 import _ from "lodash";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel,
+  AccordionItemState,
+} from "react-accessible-accordion";
+import "react-accessible-accordion/dist/fancy-example.css";
 
 function App() {
   /**
@@ -70,69 +79,98 @@ function App() {
 
   return (
     <div className="App" id="App">
-      {stage === Stages.PickCountry && (
-        <TeamChooser
-          {...{ setSelectedTeam }}
-          {...{ resetPitch }}
-          {...{ setStage }}
-        />
-      )}
-
-      {stage === Stages.PickFormation && (
-        <FormationChooser
-          {...{ setMode }}
-          {...{ selectedFormation }}
-          {...{ setSelectedFormation }}
-          {...{ setEditingId }}
-          {...{ setStage }}
-        />
-      )}
-
-      {stage === Stages.PickTeamOnPitch && selectedTeam && (
-        <PitchAndSidebarContainer>
-          <TitleAndPitch id="capture">
-            <BigTeamTitle
-              {...selectedTeam.colors}
-              title={selectedTeam.name}
-              formation={selectedFormation.name}
+      <Accordion>
+        <AccordionItem dangerouslySetExpanded={stage === Stages.PickCountry}>
+          <AccordionItemHeading onClick={() => setStage(Stages.PickCountry)}>
+            <AccordionItemButton>Choose Country</AccordionItemButton>
+          </AccordionItemHeading>
+          <AccordionItemPanel>
+            <TeamChooser
+              {...{ setSelectedTeam }}
+              {...{ resetPitch }}
+              {...{ setStage }}
             />
-            <Pitch {...{ selectedFormation }}>
-              {selectedFormation.positions.map(
-                ({ x, y, name, squadNumber, type, id }) => (
-                  <Player
-                    key={id}
-                    {...{ id }}
-                    {...{ x }}
-                    {...{ y }}
-                    {...{ name }}
-                    {...{ squadNumber }}
-                    {...{ type }}
-                    {...{ setMode }}
-                    {...{ setFilteringPosition }}
-                    {...{ editingId }}
-                    {...{ setEditingId }}
-                    shirtMainColor={selectedTeam.colors.shirtMainColor}
-                    shirtNumberColor={selectedTeam.colors.shirtNumberColor}
-                    shirtRimColor={selectedTeam.colors.shirtRimColor}
-                  />
-                )
-              )}
-            </Pitch>
-          </TitleAndPitch>
+          </AccordionItemPanel>
+        </AccordionItem>
 
-          {mode === Modes.EditingPosition && (
-            <PlayerChooserMenu
-              {...{ selectedTeam }}
-              {...{ filteringPosition }}
-              {...{ setSelectedFormation }}
-              {...{ editingId }}
+        <AccordionItem dangerouslySetExpanded={stage === Stages.PickFormation}>
+          <AccordionItemHeading onClick={() => setStage(Stages.PickFormation)}>
+            <AccordionItemButton>Choose Formation</AccordionItemButton>
+          </AccordionItemHeading>
+          <AccordionItemPanel>
+            <FormationChooser
+              {...{ setMode }}
               {...{ selectedFormation }}
+              {...{ setSelectedFormation }}
+              {...{ setEditingId }}
+              {...{ setStage }}
             />
-          )}
+          </AccordionItemPanel>
+        </AccordionItem>
+        <AccordionItem
+          dangerouslySetExpanded={stage === Stages.PickTeamOnPitch}
+        >
+          <AccordionItemHeading
+            onClick={() => setStage(Stages.PickTeamOnPitch)}
+          >
+            <AccordionItemButton>Pick Your Team</AccordionItemButton>
+          </AccordionItemHeading>
+          <AccordionItemPanel>
+            {stage === Stages.PickTeamOnPitch && selectedTeam && (
+              <PitchAndSidebarContainer>
+                <TitleAndPitch id="capture">
+                  <Outline>
+                    <BigTeamTitle
+                      {...selectedTeam.colors}
+                      title={selectedTeam.name}
+                      formation={selectedFormation.name}
+                      flagCode={selectedTeam.flagCode}
+                    />
+                    <Pitch {...{ selectedFormation }}>
+                      {selectedFormation.positions.map(
+                        ({ x, y, name, squadNumber, type, id }) => (
+                          <Player
+                            key={id}
+                            {...{ id }}
+                            {...{ x }}
+                            {...{ y }}
+                            {...{ name }}
+                            {...{ squadNumber }}
+                            {...{ type }}
+                            {...{ setMode }}
+                            {...{ setFilteringPosition }}
+                            {...{ editingId }}
+                            {...{ setEditingId }}
+                            shirtMainColor={selectedTeam.colors.shirtMainColor}
+                            shirtNumberColor={
+                              selectedTeam.colors.shirtNumberColor
+                            }
+                            shirtRimColor={selectedTeam.colors.shirtRimColor}
+                          />
+                        )
+                      )}
+                    </Pitch>
+                  </Outline>
+                </TitleAndPitch>
 
-          {mode === Modes.PromptToSave && <GenerateImg {...{ setMode }} />}
-        </PitchAndSidebarContainer>
-      )}
+                {mode === Modes.EditingPosition && (
+                  <PlayerChooserMenu
+                    {...{ selectedTeam }}
+                    {...{ filteringPosition }}
+                    {...{ setSelectedFormation }}
+                    {...{ editingId }}
+                    {...{ selectedFormation }}
+                  />
+                )}
+
+                {mode === Modes.PromptToSave && (
+                  <GenerateImg {...{ setMode }} />
+                )}
+              </PitchAndSidebarContainer>
+            )}
+          </AccordionItemPanel>
+        </AccordionItem>
+      </Accordion>
     </div>
   );
 }

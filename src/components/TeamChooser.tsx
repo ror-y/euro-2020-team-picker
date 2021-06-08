@@ -3,6 +3,9 @@ import { germany } from "../data/teams/germany";
 import { northMacedonia } from "../data/teams/north_macedonia";
 import { france } from "../data/teams/france";
 import { Stages, TeamFromWiki } from "../types";
+import { FlagIcon } from "react-flag-kit";
+import { MenuList, MenuListItem, MenuListText } from "../styles";
+
 const selectableTeams = [england, germany, northMacedonia, france];
 
 export const TeamChooser = ({
@@ -15,10 +18,10 @@ export const TeamChooser = ({
   resetPitch: () => any;
 }) => {
   return (
-    <ul>
+    <MenuList>
       {selectableTeams.map((team) => {
         return (
-          <li
+          <MenuListItem
             key={team.name}
             onClick={() => {
               resetPitch();
@@ -31,10 +34,11 @@ export const TeamChooser = ({
               setStage(Stages.PickFormation);
             }}
           >
-            {team.name}
-          </li>
+            <FlagIcon code={team.flagCode} size={48} />
+            <MenuListText>{team.name}</MenuListText>
+          </MenuListItem>
         );
       })}
-    </ul>
+    </MenuList>
   );
 };

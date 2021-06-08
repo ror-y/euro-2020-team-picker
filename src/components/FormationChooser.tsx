@@ -1,5 +1,6 @@
 import { formations } from "../data/formations";
 import { Formation, Modes, Stages } from "../types";
+import { MenuList, MenuListItem, MenuListText } from "../styles";
 
 export const FormationChooser = ({
   selectedFormation,
@@ -14,21 +15,23 @@ export const FormationChooser = ({
   setEditingId: (val: null) => any;
   setStage: (val: Stages) => any;
 }) => {
-  const handleChange = (evt: any) => {
+  const handleChange = (frmName: string) => {
     setMode(Modes.Default);
     setSelectedFormation(
       // @ts-ignore
-      formations.find(({ name }) => name === evt.target.value)
+      formations.find(({ name }) => name === frmName)
     );
     setStage(Stages.PickTeamOnPitch);
     setEditingId(null);
   };
 
   return (
-    <select onChange={handleChange} value={selectedFormation.name}>
+    <MenuList>
       {formations.map(({ name }) => (
-        <option key={name}>{name}</option>
+        <MenuListItem key={name} onClick={() => handleChange(name)}>
+          <MenuListText>{name}</MenuListText>
+        </MenuListItem>
       ))}
-    </select>
+    </MenuList>
   );
 };
