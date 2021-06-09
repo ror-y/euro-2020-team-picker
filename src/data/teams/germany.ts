@@ -73,12 +73,12 @@ export const germany: TeamFromWiki = {
     {
       name: "Joshua Kimmich",
       squadNumber: 6,
-      positions: [Positions.MF],
+      positions: [Positions.MF, Positions.DF],
     },
     {
       name: "Kai Havertz",
       squadNumber: 7,
-      positions: [Positions.MF],
+      positions: [Positions.MF, Positions.FW],
     },
     {
       name: "Toni Kroos",
@@ -108,7 +108,7 @@ export const germany: TeamFromWiki = {
     {
       name: "Leroy Sané",
       squadNumber: 19,
-      positions: [Positions.MF],
+      positions: [Positions.MF, Positions.FW],
     },
     {
       name: "İlkay Gündoğan",
@@ -123,7 +123,7 @@ export const germany: TeamFromWiki = {
     {
       name: "Thomas Müller",
       squadNumber: 25,
-      positions: [Positions.MF],
+      positions: [Positions.MF, Positions.FW],
     },
     {
       name: "Kevin Volland",

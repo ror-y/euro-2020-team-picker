@@ -2,11 +2,12 @@ import { england } from "../data/teams/england";
 import { germany } from "../data/teams/germany";
 import { northMacedonia } from "../data/teams/north_macedonia";
 import { france } from "../data/teams/france";
+import { belgium } from "../data/teams/belgium";
 import { Stages, TeamFromWiki } from "../types";
 import { FlagIcon } from "react-flag-kit";
 import { MenuList, MenuListItem, MenuListText } from "../styles";
 
-const selectableTeams = [england, germany, northMacedonia, france];
+const selectableTeams = [england, germany, northMacedonia, france, belgium];
 
 export const TeamChooser = ({
   setSelectedTeam,

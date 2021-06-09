@@ -4,7 +4,7 @@ const y = {
   goalkeeper: 87,
   fullback: 60,
   centreback: 70,
-  defensive_midfielder: 50,
+  defensive_midfielder: 55,
   midfielder: 40,
   attacking_midfielder: 30,
   winger: 30,

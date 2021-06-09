@@ -45,7 +45,12 @@ export enum Stages {
   PickTeamOnPitch = "PickTeamOnPitch",
 }
 
-type TeamName = "England" | "Germany" | "North Macedonia" | "France";
+type TeamName =
+  | "England"
+  | "Germany"
+  | "North Macedonia"
+  | "France"
+  | "Belgium";
 
 export interface TeamFromWiki {
   name: TeamName;
