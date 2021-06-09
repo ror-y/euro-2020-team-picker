@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "EURO 2020 Starting XI Picker",
+  "name": "Pick and plot your best starting XIs from all the EURO 2020 squads",
   "icons": [
     {
       "src": "favicon.ico",
