@@ -29,7 +29,11 @@ export const portugal: TeamFromWiki = {
       squadNumber: 8,
       positions: [Positions.MF],
     },
-    { name: "Bernardo Silva", squadNumber: 10, positions: [Positions.MF] },
+    {
+      name: "Bernardo Silva",
+      squadNumber: 10,
+      positions: [Positions.MF, Positions.FW],
+    },
     { name: "Bruno Fernandes", squadNumber: 11, positions: [Positions.MF] },
     { name: "Danilo Pereira", squadNumber: 13, positions: [Positions.MF] },
     { name: "William Carvalho", squadNumber: 14, positions: [Positions.MF] },

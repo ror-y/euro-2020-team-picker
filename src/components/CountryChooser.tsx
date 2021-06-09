@@ -56,18 +56,6 @@ const selectableTeams = [
   portugal,
 ];
 
-console.log(
-  selectableTeams.map((team) => {
-    return _.compact(
-      team.players.map((player) => {
-        if (player.name.split(" ").length !== 2) {
-          return player.name;
-        }
-      })
-    );
-  })
-);
-
 const FlagContainer = styled.div``;
 
 export const CountryChooser = ({
