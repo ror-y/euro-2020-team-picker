@@ -70,7 +70,7 @@ export const StyledPitchPlayerName = styled.div`
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 4px;
-  font-size: 12px;
+  font-size: 10px;
   white-space: nowrap;
 `;
 
@@ -125,9 +125,13 @@ export const SuccessMessage = styled.div`
 
   div {
     margin-bottom: 80px;
+    font-size: 14px;
+    &:first-of-type {
+      font-size: 20px;
+    }
   }
 
   a {
-    font-size: 14px;
+    font-size: 10px;
   }
 `;

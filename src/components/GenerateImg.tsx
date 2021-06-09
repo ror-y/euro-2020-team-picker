@@ -7,6 +7,7 @@ import { Modes } from "../types";
  */
 const getImage = () => {
   const node = document.getElementById("capture") as HTMLElement;
+
   htmlToImage
     .toPng(node)
     .then(function (dataUrl) {
@@ -27,11 +28,12 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  font-size: 28px;
+  font-size: 18px;
 
   button {
     margin-top: 20px;
-    font-size: 28px;
+    font-size: 18px;
+    padding: 10px;
   }
 `;
 

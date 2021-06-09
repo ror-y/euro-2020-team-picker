@@ -10,7 +10,12 @@ export const spain: TeamFromWiki = {
     titleColor: "rgb(186, 13, 31)",
   },
   players: [
-    { name: "David de Gea", squadNumber: 1, positions: [Positions.GK] },
+    {
+      name: "David de Gea",
+      squadNumber: 1,
+      positions: [Positions.GK],
+      displayName: "De Gea",
+    },
     { name: "Robert Sánchez", squadNumber: 13, positions: [Positions.GK] },
     { name: "Unai Simón", squadNumber: 23, positions: [Positions.GK] },
     { name: "César Azpilicueta", squadNumber: 2, positions: [Positions.DF] },

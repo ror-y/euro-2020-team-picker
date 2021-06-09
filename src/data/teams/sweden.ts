@@ -31,7 +31,7 @@ export const sweden: TeamFromWiki = {
     { name: "Pontus Jansson", squadNumber: 18, positions: [Positions.DF] },
     { name: "Marcus Danielson", squadNumber: 24, positions: [Positions.DF] },
     {
-      name: "Sebastian Larsson ",
+      name: "Sebastian Larsson",
       squadNumber: 7,
       positions: [Positions.MF],
     },

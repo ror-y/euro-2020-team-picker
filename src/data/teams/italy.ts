@@ -17,7 +17,12 @@ export const italy: TeamFromWiki = {
       positions: [Positions.GK],
     },
     { name: "Alex Meret", squadNumber: 26, positions: [Positions.GK] },
-    { name: "Giovanni Di Lorenzo", squadNumber: 2, positions: [Positions.DF] },
+    {
+      name: "Giovanni Di Lorenzo",
+      squadNumber: 2,
+      positions: [Positions.DF],
+      displayName: "Di Lorenzo",
+    },
     { name: "Giorgio Chiellini", squadNumber: 3, positions: [Positions.DF] },
     { name: "Leonardo Spinazzola", squadNumber: 4, positions: [Positions.DF] },
     { name: "Emerson", squadNumber: 13, positions: [Positions.DF] },

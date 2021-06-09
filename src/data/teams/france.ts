@@ -134,6 +134,7 @@ export const france: TeamFromWiki = {
       name: "Wissam Ben Yedder",
       squadNumber: 22,
       positions: [Positions.FW],
+      displayName: "Ben Yedder",
     },
     {
       name: "Marcus Thuram",

@@ -88,22 +88,6 @@ export const formations: Formation[] = [
     ]),
   },
   {
-    name: "4-4-2 Diamond",
-    positions: applyIds([
-      GOALKEEPER,
-      FULL_BACK_LEFT,
-      CENTRE_BACK_LEFT,
-      CENTRE_BACK_RIGHT,
-      FULL_BACK_RIGHT,
-      DEFENSIVE_MIDFIELDER_CENTRE_CENTRE,
-      MIDFIELDER_CENTRE_LEFT,
-      MIDFIELDER_CENTRE_RIGHT,
-      ATTACKING_MIDFIELDER_CENTRE_CENTRE,
-      FORWARD_LEFT,
-      FORWARD_RIGHT,
-    ]),
-  },
-  {
     name: "4-1-4-1",
     positions: applyIds([
       GOALKEEPER,

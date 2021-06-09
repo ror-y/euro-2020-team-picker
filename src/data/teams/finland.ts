@@ -11,7 +11,7 @@ export const finland: TeamFromWiki = {
   },
   players: [
     {
-      name: "Lukáš Hrádecký ",
+      name: "Lukáš Hrádecký",
       squadNumber: 1,
       positions: [Positions.GK],
     },

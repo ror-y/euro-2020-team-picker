@@ -187,11 +187,9 @@ function App() {
                 <div id="image-receiver" />
                 {mode === Modes.Finished && (
                   <SuccessMessage>
-                    <div>Great team!</div>
-                    <div>
-                      Here's your image. To share, right click and hit 'Save
-                      as'!
-                    </div>
+                    <div>Great choices!</div>
+                    <div>👈👈👈 Here's your image.</div>{" "}
+                    <div> To share, right click and hit 'Save Image As'!</div>
                     <div>Enjoy the Euros!</div>
                     <div>
                       <a href="https://www.paypal.me/rorysmith123">Donate</a>
