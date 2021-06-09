@@ -12,7 +12,9 @@ const getImage = () => {
     .then(function (dataUrl) {
       var img = new Image();
       img.src = dataUrl;
-      document.body.appendChild(img);
+
+      document.getElementById("capture")?.remove();
+      document.getElementById("image-receiver")?.appendChild(img);
     })
     .catch(function (error) {
       console.error("oops, something went wrong!", error);

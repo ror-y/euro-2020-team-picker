@@ -1,0 +1,52 @@
+import { Positions, TeamFromWiki } from "../../types";
+
+export const sweden: TeamFromWiki = {
+  name: "Sweden",
+  flagCode: "SE",
+  colors: {
+    shirtMainColor: "rgb(246, 206, 46)",
+    shirtNumberColor: "rgb(11, 86, 141)",
+    shirtRimColor: "rgb(11, 86, 141)",
+    titleColor: "rgb(11, 86, 141)",
+  },
+  players: [
+    { name: "Robin Olsen", squadNumber: 1, positions: [Positions.GK] },
+    { name: "Karl-Johan Johnsson", squadNumber: 12, positions: [Positions.GK] },
+    {
+      name: "Kristoffer Nordfeldt",
+      squadNumber: 23,
+      positions: [Positions.GK],
+    },
+    { name: "Mikael Lustig", squadNumber: 2, positions: [Positions.DF] },
+    { name: "Victor Lindelöf", squadNumber: 3, positions: [Positions.DF] },
+    {
+      name: "Andreas Granqvist",
+      squadNumber: 4,
+      positions: [Positions.DF],
+    },
+    { name: "Pierre Bengtsson", squadNumber: 5, positions: [Positions.DF] },
+    { name: "Ludwig Augustinsson", squadNumber: 6, positions: [Positions.DF] },
+    { name: "Filip Helander", squadNumber: 14, positions: [Positions.DF] },
+    { name: "Emil Krafth", squadNumber: 16, positions: [Positions.DF] },
+    { name: "Pontus Jansson", squadNumber: 18, positions: [Positions.DF] },
+    { name: "Marcus Danielson", squadNumber: 24, positions: [Positions.DF] },
+    {
+      name: "Sebastian Larsson ",
+      squadNumber: 7,
+      positions: [Positions.MF],
+    },
+    { name: "Albin Ekdal", squadNumber: 8, positions: [Positions.MF] },
+    { name: "Emil Forsberg", squadNumber: 10, positions: [Positions.MF] },
+    { name: "Gustav Svensson", squadNumber: 13, positions: [Positions.MF] },
+    { name: "Ken Sema", squadNumber: 15, positions: [Positions.MF] },
+    { name: "Viktor Claesson", squadNumber: 17, positions: [Positions.MF] },
+    { name: "Mattias Svanberg", squadNumber: 19, positions: [Positions.MF] },
+    { name: "Kristoffer Olsson", squadNumber: 20, positions: [Positions.MF] },
+    { name: "Dejan Kulusevski", squadNumber: 21, positions: [Positions.MF] },
+    { name: "Jens Cajuste", squadNumber: 26, positions: [Positions.MF] },
+    { name: "Marcus Berg", squadNumber: 9, positions: [Positions.FW] },
+    { name: "Alexander Isak", squadNumber: 11, positions: [Positions.FW] },
+    { name: "Robin Quaison", squadNumber: 22, positions: [Positions.FW] },
+    { name: "Jordan Larsson", squadNumber: 25, positions: [Positions.FW] },
+  ],
+};

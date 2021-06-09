@@ -1,0 +1,48 @@
+import { Positions, TeamFromWiki } from "../../types";
+
+export const austria: TeamFromWiki = {
+  name: "Austria",
+  flagCode: "AT",
+  colors: {
+    shirtMainColor: "rgb(230, 30, 47)",
+    shirtNumberColor: "rgb(255, 255, 255)",
+    shirtRimColor: "rgb(0, 0, 0)",
+    titleColor: "rgb(230, 30, 47)",
+  },
+  players: [
+    { name: "Alexander Schlager", squadNumber: 1, positions: [Positions.GK] },
+    { name: "Pavao Pervan", squadNumber: 12, positions: [Positions.GK] },
+    { name: "Daniel Bachmann", squadNumber: 13, positions: [Positions.GK] },
+    { name: "Andreas Ulmer", squadNumber: 2, positions: [Positions.DF] },
+    { name: "Aleksandar Dragović", squadNumber: 3, positions: [Positions.DF] },
+    { name: "Martin Hinteregger", squadNumber: 4, positions: [Positions.DF] },
+    { name: "Stefan Posch", squadNumber: 5, positions: [Positions.DF] },
+    { name: "David Alaba", squadNumber: 8, positions: [Positions.DF] },
+    { name: "Philipp Lienhart", squadNumber: 15, positions: [Positions.DF] },
+    { name: "Christopher Trimmel", squadNumber: 16, positions: [Positions.DF] },
+    { name: "Stefan Lainer", squadNumber: 21, positions: [Positions.DF] },
+    { name: "Marco Friedl", squadNumber: 26, positions: [Positions.DF] },
+    { name: "Stefan Ilsanker", squadNumber: 6, positions: [Positions.MF] },
+    { name: "Florian Grillitsch", squadNumber: 10, positions: [Positions.MF] },
+    {
+      name: "Julian Baumgartlinger",
+      squadNumber: 14,
+      positions: [Positions.MF],
+    },
+    { name: "Louis Schaub", squadNumber: 17, positions: [Positions.MF] },
+    { name: "Alessandro Schöpf", squadNumber: 18, positions: [Positions.MF] },
+    {
+      name: "Christoph Baumgartner",
+      squadNumber: 19,
+      positions: [Positions.MF],
+    },
+    { name: "Valentino Lazaro", squadNumber: 22, positions: [Positions.MF] },
+    { name: "Xaver Schlager", squadNumber: 23, positions: [Positions.MF] },
+    { name: "Konrad Laimer", squadNumber: 24, positions: [Positions.MF] },
+    { name: "Marko Arnautović", squadNumber: 7, positions: [Positions.FW] },
+    { name: "Marcel Sabitzer", squadNumber: 9, positions: [Positions.FW] },
+    { name: "Michael Gregoritsch", squadNumber: 11, positions: [Positions.FW] },
+    { name: "Karim Onisiwo", squadNumber: 20, positions: [Positions.FW] },
+    { name: "Saša Kalajdžić", squadNumber: 25, positions: [Positions.FW] },
+  ],
+};

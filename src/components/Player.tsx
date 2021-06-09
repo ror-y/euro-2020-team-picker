@@ -4,11 +4,11 @@ import {
   StyledShirt,
 } from "../styles";
 import { Positions, Modes } from "../types";
-import _ from "lodash";
 import styled from "styled-components";
+import _ from "lodash";
 
 const Add = styled.div`
-  font-size: 12px;
+  font-size: 8px;
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
@@ -22,6 +22,7 @@ export function Player({
   x,
   y,
   name,
+  displayName,
   squadNumber,
   type,
   setMode,
@@ -36,6 +37,7 @@ export function Player({
   x: number;
   y: number;
   name: string;
+  displayName: string | undefined;
   squadNumber: number | null;
   type: Positions;
   setMode: (val: Modes) => any;
@@ -72,7 +74,9 @@ export function Player({
         )}
       </StyledShirt>
 
-      <StyledPitchPlayerName>{_.last(name.split(" "))}</StyledPitchPlayerName>
+      <StyledPitchPlayerName>
+        {displayName ?? _.last(name.split(" "))}
+      </StyledPitchPlayerName>
     </StyledShirtNameContainer>
   );
 }

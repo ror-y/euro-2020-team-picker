@@ -1,0 +1,52 @@
+import { Positions, TeamFromWiki } from "../../types";
+
+export const poland: TeamFromWiki = {
+  name: "Poland",
+  flagCode: "PL",
+  colors: {
+    shirtMainColor: "rgb(255, 255, 255)",
+    shirtNumberColor: "rgb(211, 25, 62)",
+    shirtRimColor: "rgb(211, 25, 62)",
+    titleColor: "rgb(211, 25, 62)",
+  },
+  players: [
+    { name: "Wojciech Szczęsny", squadNumber: 1, positions: [Positions.GK] },
+    { name: "Łukasz Skorupski", squadNumber: 12, positions: [Positions.GK] },
+    { name: "Łukasz Fabiański", squadNumber: 22, positions: [Positions.GK] },
+    { name: "Kamil Piątkowski", squadNumber: 2, positions: [Positions.DF] },
+    { name: "Paweł Dawidowicz", squadNumber: 3, positions: [Positions.DF] },
+    { name: "Tomasz Kędziora", squadNumber: 4, positions: [Positions.DF] },
+    { name: "Jan Bednarek", squadNumber: 5, positions: [Positions.DF] },
+    { name: "Maciej Rybus", squadNumber: 13, positions: [Positions.DF] },
+    {
+      name: "Kamil Glik",
+      squadNumber: 15,
+      positions: [Positions.DF],
+    },
+    { name: "Bartosz Bereszyński", squadNumber: 18, positions: [Positions.DF] },
+    { name: "Michał Helik", squadNumber: 25, positions: [Positions.DF] },
+    { name: "Tymoteusz Puchacz", squadNumber: 26, positions: [Positions.DF] },
+    { name: "Kacper Kozłowski", squadNumber: 6, positions: [Positions.MF] },
+    { name: "Karol Linetty", squadNumber: 8, positions: [Positions.MF] },
+    { name: "Grzegorz Krychowiak", squadNumber: 10, positions: [Positions.MF] },
+    { name: "Mateusz Klich", squadNumber: 14, positions: [Positions.MF] },
+    { name: "Jakub Moder", squadNumber: 16, positions: [Positions.MF] },
+    { name: "Przemysław Płacheta", squadNumber: 17, positions: [Positions.MF] },
+    {
+      name: "Przemysław Frankowski",
+      squadNumber: 19,
+      positions: [Positions.MF],
+    },
+    { name: "Piotr Zieliński", squadNumber: 20, positions: [Positions.MF] },
+    { name: "Kamil Jóźwiak", squadNumber: 21, positions: [Positions.MF] },
+    { name: "Arkadiusz Milik", squadNumber: 7, positions: [Positions.FW] },
+    {
+      name: "Robert Lewandowski",
+      squadNumber: 9,
+      positions: [Positions.FW],
+    },
+    { name: "Karol Świderski", squadNumber: 11, positions: [Positions.FW] },
+    { name: "Dawid Kownacki", squadNumber: 23, positions: [Positions.FW] },
+    { name: "Jakub Świerczok", squadNumber: 24, positions: [Positions.FW] },
+  ],
+};

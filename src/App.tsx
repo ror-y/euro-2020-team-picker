@@ -2,14 +2,19 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Pitch } from "./components/Pitch";
 import { Player } from "./components/Player";
-import { TeamChooser } from "./components/TeamChooser";
+import { CountryChooser } from "./components/CountryChooser";
 import { FormationChooser } from "./components/FormationChooser";
 import { PlayerChooserMenu } from "./components/PlayerChooserMenu";
 import { BigTeamTitle } from "./components/BigTeamTitle";
 import { GenerateImg } from "./components/GenerateImg";
 import { formations } from "./data/formations";
 import { Formation, Positions, Modes, Stages, TeamFromWiki } from "./types";
-import { PitchAndSidebarContainer, TitleAndPitch, Outline } from "./styles";
+import {
+  PitchAndSidebarContainer,
+  TitleAndPitch,
+  Outline,
+  SuccessMessage,
+} from "./styles";
 import _ from "lodash";
 import {
   Accordion,
@@ -30,9 +35,8 @@ function App() {
   /**
    * The formation - this is what the user will be updating.
    */
-  const [selectedFormation, setSelectedFormation] = useState<Formation>(
-    formations[0]
-  );
+  const [selectedFormation, setSelectedFormation] =
+    useState<Formation | null>(null);
 
   /**
    * The state of the pitch UI.
@@ -60,7 +64,7 @@ function App() {
    */
   useEffect(() => {
     if (
-      _.compact(selectedFormation.positions.map(({ name }) => name)).length ===
+      _.compact(selectedFormation?.positions.map(({ name }) => name)).length ===
       11
     ) {
       setMode(Modes.PromptToSave);
@@ -72,20 +76,24 @@ function App() {
    * Reset state of pitch, for example if a new team is chosen.
    */
   const resetPitch = () => {
-    setSelectedFormation(formations[0]);
+    setSelectedFormation(null);
     setMode(Modes.Default);
     setEditingId(null);
   };
 
   return (
     <div className="App" id="App">
+      <h1 style={{ margin: "20px 0 0" }}>EURO 2020 Starting XI Picker</h1>
+      <p style={{ margin: "20px 0 30px" }}>
+        Pick and plot your best starting XIs from all the EURO 2020 squads
+      </p>
       <Accordion>
         <AccordionItem dangerouslySetExpanded={stage === Stages.PickCountry}>
           <AccordionItemHeading onClick={() => setStage(Stages.PickCountry)}>
             <AccordionItemButton>Choose Country</AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel>
-            <TeamChooser
+            <CountryChooser
               {...{ setSelectedTeam }}
               {...{ resetPitch }}
               {...{ setStage }}
@@ -123,18 +131,27 @@ function App() {
                     <BigTeamTitle
                       {...selectedTeam.colors}
                       title={selectedTeam.name}
-                      formation={selectedFormation.name}
+                      formation={selectedFormation?.name}
                       flagCode={selectedTeam.flagCode}
                     />
                     <Pitch {...{ selectedFormation }}>
-                      {selectedFormation.positions.map(
-                        ({ x, y, name, squadNumber, type, id }) => (
+                      {selectedFormation?.positions.map(
+                        ({
+                          x,
+                          y,
+                          name,
+                          displayName,
+                          squadNumber,
+                          type,
+                          id,
+                        }) => (
                           <Player
                             key={id}
                             {...{ id }}
                             {...{ x }}
                             {...{ y }}
                             {...{ name }}
+                            {...{ displayName }}
                             {...{ squadNumber }}
                             {...{ type }}
                             {...{ setMode }}
@@ -160,11 +177,26 @@ function App() {
                     {...{ setSelectedFormation }}
                     {...{ editingId }}
                     {...{ selectedFormation }}
+                    {...{ setMode }}
                   />
                 )}
 
                 {mode === Modes.PromptToSave && (
                   <GenerateImg {...{ setMode }} />
+                )}
+                <div id="image-receiver" />
+                {mode === Modes.Finished && (
+                  <SuccessMessage>
+                    <div>Great team!</div>
+                    <div>
+                      Here's your image. To share, right click and hit 'Save
+                      as'!
+                    </div>
+                    <div>Enjoy the Euros!</div>
+                    <div>
+                      <a href="https://www.paypal.me/rorysmith123">Donate</a>
+                    </div>
+                  </SuccessMessage>
                 )}
               </PitchAndSidebarContainer>
             )}

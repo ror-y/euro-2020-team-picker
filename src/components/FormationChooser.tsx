@@ -1,6 +1,7 @@
 import { formations } from "../data/formations";
 import { Formation, Modes, Stages } from "../types";
 import { MenuList, MenuListItem, MenuListText } from "../styles";
+import _ from "lodash";
 
 export const FormationChooser = ({
   selectedFormation,
@@ -9,7 +10,7 @@ export const FormationChooser = ({
   setEditingId,
   setStage,
 }: {
-  selectedFormation: Formation;
+  selectedFormation: Formation | null;
   setMode: (value: Modes) => any;
   setSelectedFormation: (value: Formation) => any;
   setEditingId: (val: null) => any;
@@ -27,7 +28,7 @@ export const FormationChooser = ({
 
   return (
     <MenuList>
-      {formations.map(({ name }) => (
+      {_.sortBy(formations, "name").map(({ name }) => (
         <MenuListItem key={name} onClick={() => handleChange(name)}>
           <MenuListText>{name}</MenuListText>
         </MenuListItem>

@@ -1,0 +1,56 @@
+import { Positions, TeamFromWiki } from "../../types";
+
+export const croatia: TeamFromWiki = {
+  name: "Croatia",
+  flagCode: "HR",
+  colors: {
+    shirtMainColor: "rgb(227, 31, 45)",
+    shirtNumberColor: "rgb(255, 255, 255)",
+    shirtRimColor: "rgb(23, 77, 161)",
+    titleColor: "rgb(227, 31, 45)",
+  },
+  players: [
+    { name: "Dominik Livaković", squadNumber: 1, positions: [Positions.GK] },
+    { name: "Lovre Kalinić", squadNumber: 12, positions: [Positions.GK] },
+    { name: "Simon Sluga", squadNumber: 23, positions: [Positions.GK] },
+    { name: "Šime Vrsaljko", squadNumber: 2, positions: [Positions.DF] },
+    { name: "Borna Barišić", squadNumber: 3, positions: [Positions.DF] },
+    { name: "Duje Ćaleta-Car", squadNumber: 5, positions: [Positions.DF] },
+    {
+      name: "Dejan Lovren",
+      squadNumber: 6,
+      positions: [Positions.DF],
+    },
+    { name: "Mile Škorić", squadNumber: 16, positions: [Positions.DF] },
+    {
+      name: "Domagoj Vida",
+      squadNumber: 21,
+      positions: [Positions.DF],
+    },
+    { name: "Josip Juranović", squadNumber: 22, positions: [Positions.DF] },
+    { name: "Joško Gvardiol", squadNumber: 24, positions: [Positions.DF] },
+    { name: "Domagoj Bradarić", squadNumber: 25, positions: [Positions.DF] },
+    { name: "Mateo Kovačić", squadNumber: 8, positions: [Positions.MF] },
+    {
+      name: "Luka Modrić",
+      squadNumber: 10,
+      positions: [Positions.MF],
+    },
+    { name: "Marcelo Brozović", squadNumber: 11, positions: [Positions.MF] },
+    { name: "Nikola Vlašić", squadNumber: 13, positions: [Positions.MF] },
+    { name: "Mario Pašalić", squadNumber: 15, positions: [Positions.MF] },
+    { name: "Milan Badelj", squadNumber: 19, positions: [Positions.MF] },
+    { name: "Luka Ivanušec", squadNumber: 26, positions: [Positions.MF] },
+    {
+      name: "Ivan Perišić",
+      squadNumber: 4,
+      positions: [Positions.FW],
+    },
+    { name: "Josip Brekalo", squadNumber: 7, positions: [Positions.FW] },
+    { name: "Andrej Kramarić", squadNumber: 9, positions: [Positions.FW] },
+    { name: "Ante Budimir", squadNumber: 14, positions: [Positions.FW] },
+    { name: "Ante Rebić", squadNumber: 17, positions: [Positions.FW] },
+    { name: "Mislav Oršić", squadNumber: 18, positions: [Positions.FW] },
+    { name: "Bruno Petković", squadNumber: 20, positions: [Positions.FW] },
+  ],
+};

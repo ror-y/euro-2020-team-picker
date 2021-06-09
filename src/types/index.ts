@@ -12,6 +12,7 @@ export type FormationItem = Coords & {
   type: Positions;
   name: string;
   squadNumber: number | null;
+  displayName?: string;
 };
 
 export interface Formation {
@@ -30,6 +31,7 @@ export interface Player {
   name: string;
   positions: Array<Positions>;
   squadNumber: number;
+  displayName?: string;
 }
 
 export enum Modes {
@@ -46,11 +48,30 @@ export enum Stages {
 }
 
 type TeamName =
-  | "England"
-  | "Germany"
+  | "Italy"
+  | "Switzerland"
+  | "Turkey"
+  | "Wales"
+  | "Belgium"
+  | "Denmark"
+  | "Finland"
+  | "Russia"
+  | "Austria"
+  | "Netherlands"
   | "North Macedonia"
+  | "Ukraine"
+  | "Croatia"
+  | "Czech Republic"
+  | "England"
+  | "Scotland"
+  | "Poland"
+  | "Slovakia"
+  | "Spain"
+  | "Sweden"
   | "France"
-  | "Belgium";
+  | "Germany"
+  | "Hungary"
+  | "Portugal";
 
 export interface TeamFromWiki {
   name: TeamName;

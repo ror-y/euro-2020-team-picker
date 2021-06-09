@@ -5,7 +5,7 @@ export function Pitch({
   selectedFormation,
   children,
 }: {
-  selectedFormation: Formation;
+  selectedFormation: Formation | null;
   children: any;
 }) {
   return <StyledPitch>{children}</StyledPitch>;

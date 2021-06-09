@@ -74,6 +74,7 @@ export const belgium: TeamFromWiki = {
       name: "Kevin De Bruyne",
       squadNumber: 7,
       positions: [Positions.MF],
+      displayName: "De Bruyne",
     },
     {
       name: "Youri Tielemans",
@@ -89,6 +90,7 @@ export const belgium: TeamFromWiki = {
       name: "Thorgan Hazard",
       squadNumber: 16,
       positions: [Positions.MF],
+      displayName: "T. Hazard",
     },
     {
       name: "Hans Vanaken",
@@ -114,6 +116,7 @@ export const belgium: TeamFromWiki = {
       name: "Eden Hazard",
       squadNumber: 10,
       positions: [Positions.FW, Positions.MF],
+      displayName: "E. Hazard",
     },
     {
       name: "Dries Mertens",

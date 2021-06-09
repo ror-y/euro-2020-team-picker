@@ -2,8 +2,6 @@ import styled from "styled-components";
 import { PlayerProps } from "../types";
 
 export const StyledPitch = styled.div`
-  width: 600px;
-  height: 800px;
   position: relative;
   background: linear-gradient(
     to bottom,
@@ -12,12 +10,18 @@ export const StyledPitch = styled.div`
     rgb(76, 134, 33) 50%,
     rgb(76, 134, 33)
   );
-  background-size: 100% 160px;
+  background-size: 100% 119px;
   border: 1px solid white;
+  height: 100%;
 `;
 
 export const Outline = styled.div`
   border: 20px solid rgb(76, 134, 33);
+  position: relative;
+  @media (min-width: 620px) {
+    width: 350px;
+  }
+  height: 475px;
 `;
 
 interface ShirtProps {
@@ -39,13 +43,14 @@ export const StyledShirtNameContainer = styled.div<PlayerProps>`
   transform: translateX(-24px);
 `;
 
+const shirtDimension = "30px;";
 export const StyledShirt = styled.div<ShirtProps>`
-  width: 38px;
-  height: 38px;
-  min-height: 38px;
-  max-height: 38px;
-  min-width: 38px;
-  max-width: 38px;
+  width: ${shirtDimension};
+  height: ${shirtDimension};
+  min-height: ${shirtDimension};
+  max-height: ${shirtDimension};
+  min-width: ${shirtDimension};
+  max-width: ${shirtDimension};
   border-radius: 50%;
   background-color: ${({ shirtMainColor }) => shirtMainColor};
   border: 3px solid ${({ shirtRimColor }) => shirtRimColor};
@@ -56,7 +61,7 @@ export const StyledShirt = styled.div<ShirtProps>`
   justify-content: center;
   box-shadow: ${({ isActive }) =>
     isActive ? "0px 0px 0px 8px rgba(255,255,255,0.5)" : ""};
-  font-size: 22px;
+  font-size: 14px;
 `;
 
 export const StyledPitchPlayerName = styled.div`
@@ -64,29 +69,37 @@ export const StyledPitchPlayerName = styled.div`
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
-  margin-top: 8px;
-  font-size: 20px;
+  margin-top: 4px;
+  font-size: 12px;
+  white-space: nowrap;
 `;
 
 export const PitchAndSidebarContainer = styled.div`
   display: flex;
+
+  @media (max-width: 900px) {
+    position: relative;
+    display: block;
+  }
 `;
 
 export const TitleAndPitch = styled.div`
-  border: 1px solid black;
   position: relative;
 `;
 
 export const MenuList = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
+  overflow: auto;
 `;
 
 export const MenuListItem = styled.li`
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 3px;
-  height: 100px;
-  width: 100px;
+  height: 70px;
+  width: 70px;
+  min-width: 100px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -95,6 +108,8 @@ export const MenuListItem = styled.li`
   margin-right: 10px;
   cursor: pointer;
   transition: all 250ms;
+  margin-bottom: 10px;
+  font-size: 12px;
   &:hover {
     background-color: rgba(0, 0, 0, 0.03);
   }
@@ -102,4 +117,17 @@ export const MenuListItem = styled.li`
 
 export const MenuListText = styled.div`
   text-transform: uppercase;
+`;
+
+export const SuccessMessage = styled.div`
+  font-size: 24px;
+  padding: 20px;
+
+  div {
+    margin-bottom: 80px;
+  }
+
+  a {
+    font-size: 14px;
+  }
 `;

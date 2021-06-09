@@ -1,0 +1,48 @@
+import { Positions, TeamFromWiki } from "../../types";
+
+export const denmark: TeamFromWiki = {
+  name: "Denmark",
+  flagCode: "DK",
+  colors: {
+    shirtMainColor: "rgb(218, 37, 36)",
+    shirtNumberColor: "rgb(255, 255, 255)",
+    shirtRimColor: "rgb(255, 255, 255)",
+    titleColor: "rgb(218, 37, 36)",
+  },
+  players: [
+    {
+      name: "Kasper Schmeichel",
+      squadNumber: 1,
+      positions: [Positions.GK],
+    },
+    { name: "Jonas Lössl", squadNumber: 16, positions: [Positions.GK] },
+    { name: "Frederik Rønnow", squadNumber: 22, positions: [Positions.GK] },
+    { name: "Joachim Andersen", squadNumber: 2, positions: [Positions.DF] },
+    { name: "Jannik Vestergaard", squadNumber: 3, positions: [Positions.DF] },
+    { name: "Simon Kjær", squadNumber: 4, positions: [Positions.DF] },
+    { name: "Joakim Mæhle", squadNumber: 5, positions: [Positions.DF] },
+    { name: "Andreas Christensen", squadNumber: 6, positions: [Positions.DF] },
+    { name: "Mathias Jørgensen", squadNumber: 13, positions: [Positions.DF] },
+    { name: "Jens Stryger Larsen", squadNumber: 17, positions: [Positions.DF] },
+    { name: "Nicolai Boilesen", squadNumber: 26, positions: [Positions.DF] },
+    { name: "Robert Skov", squadNumber: 7, positions: [Positions.MF] },
+    { name: "Thomas Delaney", squadNumber: 8, positions: [Positions.MF] },
+    { name: "Christian Eriksen", squadNumber: 10, positions: [Positions.MF] },
+    { name: "Christian Nørgaard", squadNumber: 15, positions: [Positions.MF] },
+    { name: "Daniel Wass", squadNumber: 18, positions: [Positions.MF] },
+    {
+      name: "Pierre-Emile Højbjerg",
+      squadNumber: 23,
+      positions: [Positions.MF],
+    },
+    { name: "Mathias Jensen", squadNumber: 24, positions: [Positions.MF] },
+    { name: "Anders Christiansen", squadNumber: 25, positions: [Positions.MF] },
+    { name: "Martin Braithwaite", squadNumber: 9, positions: [Positions.FW] },
+    { name: "Andreas Skov Olsen", squadNumber: 11, positions: [Positions.FW] },
+    { name: "Kasper Dolberg", squadNumber: 12, positions: [Positions.FW] },
+    { name: "Mikkel Damsgaard", squadNumber: 14, positions: [Positions.FW] },
+    { name: "Jonas Wind", squadNumber: 19, positions: [Positions.FW] },
+    { name: "Yussuf Poulsen", squadNumber: 20, positions: [Positions.FW] },
+    { name: "Andreas Cornelius", squadNumber: 21, positions: [Positions.FW] },
+  ],
+};

@@ -1,0 +1,42 @@
+import { Positions, TeamFromWiki } from "../../types";
+
+export const spain: TeamFromWiki = {
+  name: "Spain",
+  flagCode: "ES",
+  colors: {
+    shirtMainColor: "rgb(186, 13, 31)",
+    shirtNumberColor: "rgb(246, 177, 42)",
+    shirtRimColor: "rgb(39, 67, 97)",
+    titleColor: "rgb(186, 13, 31)",
+  },
+  players: [
+    { name: "David de Gea", squadNumber: 1, positions: [Positions.GK] },
+    { name: "Robert Sánchez", squadNumber: 13, positions: [Positions.GK] },
+    { name: "Unai Simón", squadNumber: 23, positions: [Positions.GK] },
+    { name: "César Azpilicueta", squadNumber: 2, positions: [Positions.DF] },
+    { name: "Diego Llorente", squadNumber: 3, positions: [Positions.DF] },
+    { name: "Pau Torres", squadNumber: 4, positions: [Positions.DF] },
+    { name: "Eric García", squadNumber: 12, positions: [Positions.DF] },
+    { name: "José Gayà", squadNumber: 14, positions: [Positions.DF] },
+    { name: "Jordi Alba", squadNumber: 18, positions: [Positions.DF] },
+    { name: "Aymeric Laporte", squadNumber: 24, positions: [Positions.DF] },
+    {
+      name: "Sergio Busquets",
+      squadNumber: 5,
+      positions: [Positions.MF],
+    },
+    { name: "Marcos Llorente", squadNumber: 6, positions: [Positions.MF] },
+    { name: "Koke", squadNumber: 8, positions: [Positions.MF] },
+    { name: "Thiago", squadNumber: 10, positions: [Positions.MF] },
+    { name: "Rodri", squadNumber: 16, positions: [Positions.MF] },
+    { name: "Fabián", squadNumber: 17, positions: [Positions.MF] },
+    { name: "Dani Olmo", squadNumber: 19, positions: [Positions.MF] },
+    { name: "Pedri", squadNumber: 26, positions: [Positions.MF] },
+    { name: "Álvaro Morata", squadNumber: 7, positions: [Positions.FW] },
+    { name: "Gerard", squadNumber: 9, positions: [Positions.FW] },
+    { name: "Ferran Torres", squadNumber: 11, positions: [Positions.FW] },
+    { name: "Adama Traoré", squadNumber: 20, positions: [Positions.FW] },
+    { name: "Mikel Oyarzabal", squadNumber: 21, positions: [Positions.FW] },
+    { name: "Pablo Sarabia", squadNumber: 22, positions: [Positions.FW] },
+  ],
+};

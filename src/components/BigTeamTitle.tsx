@@ -17,8 +17,8 @@ const Container = styled.div<Props>`
 const Title = styled.h2`
   background-color: #fff;
   position: absolute;
-  padding: 0 20px;
-  font-size: 40px;
+  padding: 0 10px;
+  font-size: 22px;
   margin: 0;
   z-index: 10;
   display: flex;
@@ -31,11 +31,11 @@ const Title = styled.h2`
 
 const Formation = styled.p`
   margin: 0;
-  font-size: 20px;
+  font-size: 12px;
   position: absolute;
-  right: 20px;
+  right: 0px;
   background-color: #fff;
-  padding: 0 10px;
+  padding: 0 5px;
   z-index: 10;
   min-width: 70px;
 `;
@@ -54,7 +54,7 @@ export const BigTeamTitle = ({
   shirtRimColor: string;
   titleColor: string;
   title: string;
-  formation: string;
+  formation: string | undefined;
   flagCode: FlagIconCode;
 }) => {
   return (

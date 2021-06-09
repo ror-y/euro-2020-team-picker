@@ -1,0 +1,48 @@
+import { Positions, TeamFromWiki } from "../../types";
+
+export const wales: TeamFromWiki = {
+  name: "Wales",
+  flagCode: "GB-WLS",
+  colors: {
+    shirtMainColor: "rgb(199, 33, 44)",
+    shirtNumberColor: "rgb(246, 196, 54)",
+    shirtRimColor: "gb(15, 124, 61)",
+    titleColor: "rgb(199, 33, 44)",
+  },
+  players: [
+    { name: "Wayne Hennessey", squadNumber: 1, positions: [Positions.GK] },
+    { name: "Danny Ward", squadNumber: 12, positions: [Positions.GK] },
+    { name: "Adam Davies", squadNumber: 21, positions: [Positions.GK] },
+    { name: "Chris Gunter", squadNumber: 2, positions: [Positions.DF] },
+    { name: "Neco Williams", squadNumber: 3, positions: [Positions.DF] },
+    { name: "Ben Davies", squadNumber: 4, positions: [Positions.DF] },
+    { name: "Tom Lockyer", squadNumber: 5, positions: [Positions.DF] },
+    { name: "Joe Rodon", squadNumber: 6, positions: [Positions.DF] },
+    { name: "Connor Roberts", squadNumber: 14, positions: [Positions.DF] },
+    {
+      name: "Rhys Norrington-Davies",
+      squadNumber: 17,
+      positions: [Positions.DF],
+    },
+    { name: "Chris Mepham", squadNumber: 22, positions: [Positions.DF] },
+    { name: "Ben Cabango", squadNumber: 24, positions: [Positions.DF] },
+    { name: "Joe Allen", squadNumber: 7, positions: [Positions.MF] },
+    { name: "Harry Wilson", squadNumber: 8, positions: [Positions.MF] },
+    { name: "Aaron Ramsey", squadNumber: 10, positions: [Positions.MF] },
+    { name: "Ethan Ampadu", squadNumber: 15, positions: [Positions.MF] },
+    { name: "Joe Morrell", squadNumber: 16, positions: [Positions.MF] },
+    { name: "Jonny Williams", squadNumber: 18, positions: [Positions.MF] },
+    { name: "David Brooks", squadNumber: 19, positions: [Positions.MF] },
+    { name: "Daniel James", squadNumber: 20, positions: [Positions.MF] },
+    { name: "Dylan Levitt", squadNumber: 23, positions: [Positions.MF] },
+    { name: "Rubin Colwill", squadNumber: 25, positions: [Positions.MF] },
+    { name: "Matthew Smith", squadNumber: 26, positions: [Positions.MF] },
+    { name: "Tyler Roberts", squadNumber: 9, positions: [Positions.FW] },
+    {
+      name: "Gareth Bale",
+      squadNumber: 11,
+      positions: [Positions.FW],
+    },
+    { name: "Kieffer Moore", squadNumber: 13, positions: [Positions.FW] },
+  ],
+};

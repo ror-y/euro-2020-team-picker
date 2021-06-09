@@ -6,9 +6,9 @@ const y = {
   centreback: 70,
   defensive_midfielder: 55,
   midfielder: 40,
-  attacking_midfielder: 30,
+  attacking_midfielder: 25,
   winger: 30,
-  forward: 14,
+  forward: 12,
 };
 
 const x = {
@@ -107,7 +107,7 @@ export const MIDFIELDER_CENTRE_LEFT = {
 
 export const MIDFIELDER_CENTRE_CENTRE = {
   x: x.centre,
-  y: y.midfielder,
+  y: y.midfielder + 5,
   type: Positions.MF,
 };
 
@@ -129,6 +129,12 @@ export const WINGER_RIGHT = {
   type: Positions.MF,
 };
 
+export const ATTACKING_MIDFIELDER_LEFT = {
+  x: x.fullback_winger_left,
+  y: y.attacking_midfielder,
+  type: Positions.MF,
+};
+
 export const ATTACKING_MIDFIELDER_CENTRE_LEFT = {
   x: x.left,
   y: y.attacking_midfielder,
@@ -147,9 +153,15 @@ export const ATTACKING_MIDFIELDER_CENTRE_RIGHT = {
   type: Positions.MF,
 };
 
+export const ATTACKING_MIDFIELDER_RIGHT = {
+  x: x.fullback_winger_right,
+  y: y.attacking_midfielder,
+  type: Positions.MF,
+};
+
 export const FORWARD_LEFT_EXTREME = {
-  x: x.left_extreme,
-  y: y.forward,
+  x: x.left_extreme - 3,
+  y: y.forward + 3,
   type: Positions.FW,
 };
 
@@ -172,7 +184,7 @@ export const FORWARD_RIGHT = {
 };
 
 export const FORWARD_RIGHT_EXTREME = {
-  x: x.right_extreme,
-  y: y.forward,
+  x: x.right_extreme + 3,
+  y: y.forward + 3,
   type: Positions.FW,
 };
