@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/euro-2020-team-picker/static/css/main.16daedf8.chunk.css",
+    "main.js": "/euro-2020-team-picker/static/js/main.6337454d.chunk.js",
+    "main.js.map": "/euro-2020-team-picker/static/js/main.6337454d.chunk.js.map",
+    "runtime-main.js": "/euro-2020-team-picker/static/js/runtime-main.cb3e3dec.js",
+    "runtime-main.js.map": "/euro-2020-team-picker/static/js/runtime-main.cb3e3dec.js.map",
+    "static/css/2.0817ad80.chunk.css": "/euro-2020-team-picker/static/css/2.0817ad80.chunk.css",
+    "static/js/2.abd15851.chunk.js": "/euro-2020-team-picker/static/js/2.abd15851.chunk.js",
+    "static/js/2.abd15851.chunk.js.map": "/euro-2020-team-picker/static/js/2.abd15851.chunk.js.map",
+    "static/js/3.434cb8dc.chunk.js": "/euro-2020-team-picker/static/js/3.434cb8dc.chunk.js",
+    "static/js/3.434cb8dc.chunk.js.map": "/euro-2020-team-picker/static/js/3.434cb8dc.chunk.js.map",
+    "index.html": "/euro-2020-team-picker/index.html",
+    "static/css/2.0817ad80.chunk.css.map": "/euro-2020-team-picker/static/css/2.0817ad80.chunk.css.map",
+    "static/css/main.16daedf8.chunk.css.map": "/euro-2020-team-picker/static/css/main.16daedf8.chunk.css.map",
+    "static/js/2.abd15851.chunk.js.LICENSE.txt": "/euro-2020-team-picker/static/js/2.abd15851.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cb3e3dec.js",
+    "static/css/2.0817ad80.chunk.css",
+    "static/js/2.abd15851.chunk.js",
+    "static/css/main.16daedf8.chunk.css",
+    "static/js/main.6337454d.chunk.js"
+  ]
+}
