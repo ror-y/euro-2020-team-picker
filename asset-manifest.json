@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/euro-2020-team-picker/static/css/main.1af06147.chunk.css",
-    "main.js": "/euro-2020-team-picker/static/js/main.af5dddaa.chunk.js",
-    "main.js.map": "/euro-2020-team-picker/static/js/main.af5dddaa.chunk.js.map",
+    "main.js": "/euro-2020-team-picker/static/js/main.a13191e7.chunk.js",
+    "main.js.map": "/euro-2020-team-picker/static/js/main.a13191e7.chunk.js.map",
     "runtime-main.js": "/euro-2020-team-picker/static/js/runtime-main.cb3e3dec.js",
     "runtime-main.js.map": "/euro-2020-team-picker/static/js/runtime-main.cb3e3dec.js.map",
     "static/css/2.0817ad80.chunk.css": "/euro-2020-team-picker/static/css/2.0817ad80.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.0817ad80.chunk.css",
     "static/js/2.abd15851.chunk.js",
     "static/css/main.1af06147.chunk.css",
-    "static/js/main.af5dddaa.chunk.js"
+    "static/js/main.a13191e7.chunk.js"
   ]
 }
