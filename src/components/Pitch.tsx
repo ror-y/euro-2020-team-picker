@@ -15,7 +15,7 @@ const TopBox = styled.div`
   width: 33%;
   left: 33%;
   border: 1px solid white;
-  top: 0;
+  top: -1px;
   background-color: transparent;
   position: absolute;
 `;
@@ -38,12 +38,12 @@ const Circle = styled.div`
 `;
 
 const BottomBox = styled(TopBox)`
-  bottom: 0;
+  bottom: -1px;
   top: auto;
 `;
 
 const BottomBoxSmall = styled(TopBox)`
-  bottom: 0;
+  bottom: -1px;
   top: auto;
   width: 15%;
   height: 4%;
@@ -52,7 +52,7 @@ const BottomBoxSmall = styled(TopBox)`
 `;
 
 const TopBoxSmall = styled(BottomBoxSmall)`
-  top: 0;
+  top: -1px;
   bottom: auto;
 `;
 

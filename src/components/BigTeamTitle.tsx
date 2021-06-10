@@ -29,7 +29,7 @@ const Title = styled.h2`
   }
 `;
 
-const Formation = styled.p`
+const Formation = styled.div`
   margin: 0;
   font-size: 12px;
   position: absolute;
@@ -37,6 +37,7 @@ const Formation = styled.p`
   background-color: #fff;
   padding: 0 5px;
   z-index: 10;
+  min-width: 45px;
 `;
 
 export const BigTeamTitle = ({
