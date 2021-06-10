@@ -2,10 +2,12 @@ import { StyledPitch } from "../styles";
 import { Formation } from "../types";
 import styled from "styled-components";
 
+const lineColor = "rgb(255, 255, 255)";
+
 const MiddleLine = styled.div`
   width: 100%;
   height: 1px;
-  background-color: white;
+  background-color: ${lineColor};
   top: 50%;
   position: absolute;
 `;
@@ -14,7 +16,7 @@ const TopBox = styled.div`
   height: 10%;
   width: 33%;
   left: 33%;
-  border: 1px solid white;
+  border: 1px solid ${lineColor};
   top: -1px;
   background-color: transparent;
   position: absolute;
@@ -32,7 +34,7 @@ const Circle = styled.div`
   max-height: ${dimension};
   top: 50%;
   left: 50%;
-  border: 1px solid white;
+  border: 1px solid ${lineColor};
   position: absolute;
   transform: translate(-50%, -50%);
 `;

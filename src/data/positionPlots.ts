@@ -2,10 +2,10 @@ import { Positions } from "../types";
 
 const y = {
   goalkeeper: 85,
-  fullback: 57,
-  centreback: 65,
-  defensive_midfielder: 50,
-  midfielder: 40,
+  fullback: 55,
+  centreback: 63,
+  defensive_midfielder: 48,
+  midfielder: 38,
   attacking_midfielder: 25,
   winger: 32,
   forward: 12,
