@@ -121,7 +121,7 @@ function App() {
           >
             <AccordionItemButton>Pick Your Team</AccordionItemButton>
           </AccordionItemHeading>
-          <AccordionItemPanel>
+          <AccordionItemPanel style={{ height: "760px" }}>
             {stage === Stages.PickTeamOnPitch && selectedTeam && (
               <PitchAndSidebarContainer>
                 <TitleAndPitch id="capture">
