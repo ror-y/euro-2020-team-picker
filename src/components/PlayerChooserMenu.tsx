@@ -44,7 +44,7 @@ const ListItem = styled.li`
   margin-bottom: 12px;
   margin-right: 12px;
   font-size: 12px;
-  width: 150px;
+  width: 120px;
 
   @media (max-width: 900px) {
     height: 30px;
@@ -74,6 +74,7 @@ export const PlayerChooserMenu = ({
   editingId,
   selectedFormation,
   setMode,
+  show,
 }: {
   selectedTeam: TeamFromWiki;
   filteringPosition: Positions | null;
@@ -81,6 +82,7 @@ export const PlayerChooserMenu = ({
   editingId: number | null;
   selectedFormation: Formation | null;
   setMode: (mode: Modes) => any;
+  show: boolean;
 }) => {
   const isDisabled = (playerName: string) => {
     return selectedFormation?.positions
@@ -111,7 +113,7 @@ export const PlayerChooserMenu = ({
   };
 
   return (
-    <MobileContainer>
+    <MobileContainer style={{ display: show ? "block" : "none" }}>
       <List>
         {filteringPosition &&
           selectedTeam.players.map((player) => (

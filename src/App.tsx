@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import "./App.css";
 import { Pitch } from "./components/Pitch";
 import { Player } from "./components/Player";
@@ -6,7 +6,6 @@ import { CountryChooser } from "./components/CountryChooser";
 import { FormationChooser } from "./components/FormationChooser";
 import { PlayerChooserMenu } from "./components/PlayerChooserMenu";
 import { BigTeamTitle } from "./components/BigTeamTitle";
-import { GenerateImg } from "./components/GenerateImg";
 import { Formation, Positions, Modes, Stages, TeamFromWiki } from "./types";
 import {
   PitchAndSidebarContainer,
@@ -23,6 +22,28 @@ import {
   AccordionItemPanel,
 } from "react-accessible-accordion";
 import "react-accessible-accordion/dist/fancy-example.css";
+import Media from "react-media";
+import * as htmlToImage from "html-to-image";
+
+const getImage = () => {
+  const node = document.getElementById("capture") as HTMLElement;
+
+  node.style.width = "390px";
+  node.style.height = "515px";
+
+  htmlToImage
+    .toPng(node)
+    .then(function (dataUrl) {
+      var img = new Image();
+      img.src = dataUrl;
+
+      document.getElementById("capture")?.remove();
+      document.getElementById("image-receiver")?.appendChild(img);
+    })
+    .catch(function (error) {
+      console.error("oops, something went wrong!", error);
+    });
+};
 
 function App() {
   /**
@@ -61,11 +82,12 @@ function App() {
    * If all 11 positions have been chosen, prompt to save and/or share.
    */
   useEffect(() => {
-    if (
-      _.compact(selectedFormation?.positions.map(({ name }) => name)).length ===
-      11
-    ) {
-      setMode(Modes.PromptToSave);
+    const compactPositions = _.compact(
+      selectedFormation?.positions.map(({ name }) => name)
+    );
+    if (compactPositions.length === 11) {
+      setMode(Modes.Finished);
+      getImage();
       setEditingId(null);
     }
   }, [selectedFormation]);
@@ -168,30 +190,62 @@ function App() {
                   </Outline>
                 </TitleAndPitch>
 
-                {mode === Modes.EditingPosition && (
-                  <PlayerChooserMenu
-                    {...{ selectedTeam }}
-                    {...{ filteringPosition }}
-                    {...{ setSelectedFormation }}
-                    {...{ editingId }}
-                    {...{ selectedFormation }}
-                    {...{ setMode }}
-                  />
-                )}
+                <PlayerChooserMenu
+                  show={mode === Modes.EditingPosition}
+                  {...{ selectedTeam }}
+                  {...{ filteringPosition }}
+                  {...{ setSelectedFormation }}
+                  {...{ editingId }}
+                  {...{ selectedFormation }}
+                  {...{ setMode }}
+                />
 
-                {mode === Modes.PromptToSave && (
-                  <GenerateImg {...{ setMode }} />
-                )}
                 <div id="image-receiver" />
                 {mode === Modes.Finished && (
                   <SuccessMessage>
-                    <div>Great choice!</div>
-                    <div>👈👈👈 Here's your image.</div>{" "}
-                    <div> To share, right click and hit 'Save Image As'!</div>
-                    <div>Enjoy the Euros!</div>
-                    <div>
-                      <a href="https://www.paypal.me/rorysmith123">Donate</a>
-                    </div>
+                    <Media
+                      queries={{
+                        small: "(max-width: 900px)",
+                        large: "(min-width: 901px)",
+                      }}
+                    >
+                      {(matches) => (
+                        <>
+                          {matches.small && (
+                            <Fragment>
+                              <div>Great choice!</div>
+                              <div>👆👆👆 Here's your image.</div>{" "}
+                              <div>
+                                {" "}
+                                To share, tap & hold and Save or Share!
+                              </div>
+                              <div>Enjoy the Euros!</div>
+                              <div>
+                                <a href="https://www.paypal.me/rorysmith123">
+                                  Donate
+                                </a>
+                              </div>
+                            </Fragment>
+                          )}
+                          {matches.large && (
+                            <Fragment>
+                              <div>Great choice!</div>
+                              <div>👈👈👈 Here's your image.</div>{" "}
+                              <div>
+                                {" "}
+                                To share, right click and hit 'Save Image As'!
+                              </div>
+                              <div>Enjoy the Euros!</div>
+                              <div>
+                                <a href="https://www.paypal.me/rorysmith123">
+                                  Donate
+                                </a>
+                              </div>
+                            </Fragment>
+                          )}
+                        </>
+                      )}
+                    </Media>
                   </SuccessMessage>
                 )}
               </PitchAndSidebarContainer>
