@@ -1,6 +1,16 @@
 import styled from "styled-components";
 import { Player, Positions, Formation, TeamFromWiki, Modes } from "../types";
 
+const MobileContainer = styled.div`
+  @media (max-width: 900px) {
+    overflow: auto;
+    height: 515px;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+  }
+`;
+
 const List = styled.ul`
   list-style-type: none;
   margin: 0;
@@ -12,7 +22,6 @@ const List = styled.ul`
   height: 500px;
 
   @media (max-width: 900px) {
-    position: absolute;
     top: 0;
     bottom: 0;
     z-index: 100;
@@ -20,6 +29,8 @@ const List = styled.ul`
     opacity: 0.9;
     width: 300px;
     overflow: auto;
+    height: 1000px;
+    flex-flow: column nowrap;
   }
 `;
 
@@ -34,6 +45,10 @@ const ListItem = styled.li`
   margin-right: 12px;
   font-size: 12px;
   width: 150px;
+
+  @media (max-width: 900px) {
+    height: 30px;
+  }
 `;
 
 const getBgColor = (position: Positions) => {
@@ -96,20 +111,22 @@ export const PlayerChooserMenu = ({
   };
 
   return (
-    <List>
-      {filteringPosition &&
-        selectedTeam.players.map((player) => (
-          <ListItem
-            key={player.name}
-            onClick={() => handleClick(player)}
-            style={{
-              color: isDisabled(player.name) ? "grey" : "black",
-              backgroundColor: getBgColor(player.positions[0]),
-            }}
-          >
-            {player.name}
-          </ListItem>
-        ))}
-    </List>
+    <MobileContainer>
+      <List>
+        {filteringPosition &&
+          selectedTeam.players.map((player) => (
+            <ListItem
+              key={player.name}
+              onClick={() => handleClick(player)}
+              style={{
+                color: isDisabled(player.name) ? "grey" : "black",
+                backgroundColor: getBgColor(player.positions[0]),
+              }}
+            >
+              {player.name}
+            </ListItem>
+          ))}
+      </List>
+    </MobileContainer>
   );
 };

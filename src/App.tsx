@@ -90,7 +90,7 @@ function App() {
           <AccordionItemHeading onClick={() => setStage(Stages.PickCountry)}>
             <AccordionItemButton>Choose Country</AccordionItemButton>
           </AccordionItemHeading>
-          <AccordionItemPanel>
+          <AccordionItemPanel style={{ padding: "20px" }}>
             <CountryChooser
               {...{ setSelectedTeam }}
               {...{ resetPitch }}
@@ -103,7 +103,7 @@ function App() {
           <AccordionItemHeading onClick={() => setStage(Stages.PickFormation)}>
             <AccordionItemButton>Choose Formation</AccordionItemButton>
           </AccordionItemHeading>
-          <AccordionItemPanel>
+          <AccordionItemPanel style={{ padding: "20px" }}>
             <FormationChooser
               {...{ setMode }}
               {...{ selectedFormation }}
@@ -121,7 +121,7 @@ function App() {
           >
             <AccordionItemButton>Pick Your Team</AccordionItemButton>
           </AccordionItemHeading>
-          <AccordionItemPanel style={{ minHeight: "760px" }}>
+          <AccordionItemPanel style={{ minHeight: "760px", padding: "20px" }}>
             {stage === Stages.PickTeamOnPitch && selectedTeam && (
               <PitchAndSidebarContainer>
                 <TitleAndPitch id="capture">
