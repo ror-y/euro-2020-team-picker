@@ -7,8 +7,9 @@ const List = styled.ul`
   padding: 0;
   width: 330px;
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   padding: 0 20px;
+  height: 500px;
 
   @media (max-width: 900px) {
     position: absolute;
@@ -30,8 +31,26 @@ const ListItem = styled.li`
   align-items: center;
   justify-content: center;
   margin-bottom: 12px;
+  margin-right: 12px;
   font-size: 12px;
+  width: 150px;
 `;
+
+const getBgColor = (position: Positions) => {
+  const alpha = 0.08;
+  if (position === Positions.GK) {
+    return `rgba(100, 0, 0, ${alpha})`;
+  }
+  if (position === Positions.DF) {
+    return `rgba(0, 100, 0, ${alpha})`;
+  }
+  if (position === Positions.MF) {
+    return `rgba(100, 100, 20, ${alpha})`;
+  }
+  if (position === Positions.FW) {
+    return `rgba(20, 50, 180, ${alpha})`;
+  }
+};
 
 export const PlayerChooserMenu = ({
   selectedTeam,
@@ -79,17 +98,18 @@ export const PlayerChooserMenu = ({
   return (
     <List>
       {filteringPosition &&
-        selectedTeam.players.map((player) =>
-          player.positions.includes(filteringPosition) ? (
-            <ListItem
-              key={player.name}
-              onClick={() => handleClick(player)}
-              style={{ color: isDisabled(player.name) ? "grey" : "black" }}
-            >
-              {player.name}
-            </ListItem>
-          ) : null
-        )}
+        selectedTeam.players.map((player) => (
+          <ListItem
+            key={player.name}
+            onClick={() => handleClick(player)}
+            style={{
+              color: isDisabled(player.name) ? "grey" : "black",
+              backgroundColor: getBgColor(player.positions[0]),
+            }}
+          >
+            {player.name}
+          </ListItem>
+        ))}
     </List>
   );
 };
