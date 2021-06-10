@@ -85,7 +85,11 @@ export const CountryChooser = ({
             }}
           >
             <FlagContainer>
-              <FlagIcon code={team.flagCode} size={48} />
+              <FlagIcon
+                code={team.flagCode}
+                size={48}
+                style={{ height: "36px" }}
+              />
             </FlagContainer>
             <MenuListText>{team.name}</MenuListText>
           </MenuListItem>
