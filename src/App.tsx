@@ -7,7 +7,6 @@ import { FormationChooser } from "./components/FormationChooser";
 import { PlayerChooserMenu } from "./components/PlayerChooserMenu";
 import { BigTeamTitle } from "./components/BigTeamTitle";
 import { GenerateImg } from "./components/GenerateImg";
-import { formations } from "./data/formations";
 import { Formation, Positions, Modes, Stages, TeamFromWiki } from "./types";
 import {
   PitchAndSidebarContainer,
@@ -22,7 +21,6 @@ import {
   AccordionItemHeading,
   AccordionItemButton,
   AccordionItemPanel,
-  AccordionItemState,
 } from "react-accessible-accordion";
 import "react-accessible-accordion/dist/fancy-example.css";
 
@@ -187,7 +185,7 @@ function App() {
                 <div id="image-receiver" />
                 {mode === Modes.Finished && (
                   <SuccessMessage>
-                    <div>Great choices!</div>
+                    <div>Great choice!</div>
                     <div>👈👈👈 Here's your image.</div>{" "}
                     <div> To share, right click and hit 'Save Image As'!</div>
                     <div>Enjoy the Euros!</div>

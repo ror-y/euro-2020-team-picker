@@ -30,7 +30,7 @@ export const FormationChooser = ({
     <MenuList>
       {_.sortBy(formations, "name").map(({ name }) => (
         <MenuListItem key={name} onClick={() => handleChange(name)}>
-          <MenuListText>{name}</MenuListText>
+          <MenuListText style={{ fontSize: "18px" }}>{name}</MenuListText>
         </MenuListItem>
       ))}
     </MenuList>
