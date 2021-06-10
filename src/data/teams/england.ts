@@ -66,6 +66,11 @@ export const england: TeamFromWiki = {
       positions: [Positions.DF],
     },
     {
+      name: "Ben White",
+      squadNumber: 22,
+      positions: [Positions.DF],
+    },
+    {
       name: "Reece James",
       squadNumber: 24,
       positions: [Positions.DF],
@@ -98,7 +103,7 @@ export const england: TeamFromWiki = {
     {
       name: "Jack Grealish",
       squadNumber: 7,
-      positions: [Positions.MF, Positions.FW],
+      positions: [Positions.MF],
     },
     {
       name: "Harry Kane",
@@ -108,7 +113,7 @@ export const england: TeamFromWiki = {
     {
       name: "Raheem Sterling",
       squadNumber: 10,
-      positions: [Positions.MF, Positions.FW],
+      positions: [Positions.FW],
     },
     {
       name: "Marcus Rashford",
@@ -118,7 +123,7 @@ export const england: TeamFromWiki = {
     {
       name: "Jadon Sancho",
       squadNumber: 17,
-      positions: [Positions.MF, Positions.FW],
+      positions: [Positions.FW],
     },
     {
       name: "Dominic Calvert-Lewin",
@@ -128,12 +133,12 @@ export const england: TeamFromWiki = {
     {
       name: "Phil Foden",
       squadNumber: 20,
-      positions: [Positions.MF, Positions.FW],
+      positions: [Positions.FW],
     },
     {
       name: "Bukayo Saka",
       squadNumber: 25,
-      positions: [Positions.MF, Positions.FW],
+      positions: [Positions.FW],
     },
   ],
 };

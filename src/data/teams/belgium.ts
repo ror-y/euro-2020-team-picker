@@ -115,13 +115,13 @@ export const belgium: TeamFromWiki = {
     {
       name: "Eden Hazard",
       squadNumber: 10,
-      positions: [Positions.FW, Positions.MF],
+      positions: [Positions.FW],
       displayName: "E. Hazard",
     },
     {
       name: "Dries Mertens",
       squadNumber: 14,
-      positions: [Positions.FW, Positions.MF],
+      positions: [Positions.FW],
     },
     {
       name: "Christian Benteke",

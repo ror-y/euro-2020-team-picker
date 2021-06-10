@@ -113,12 +113,12 @@ export const france: TeamFromWiki = {
     {
       name: "Kylian Mbappé",
       squadNumber: 10,
-      positions: [Positions.MF, Positions.FW],
+      positions: [Positions.FW],
     },
     {
       name: "Ousmane Dembélé",
       squadNumber: 11,
-      positions: [Positions.MF, Positions.FW],
+      positions: [Positions.FW],
     },
     {
       name: "Karim Benzema",
@@ -128,7 +128,7 @@ export const france: TeamFromWiki = {
     {
       name: "Kingsley Coman",
       squadNumber: 20,
-      positions: [Positions.MF, Positions.FW],
+      positions: [Positions.FW],
     },
     {
       name: "Wissam Ben Yedder",
