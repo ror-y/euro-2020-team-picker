@@ -8,6 +8,9 @@ import { Modes } from "../types";
 const getImage = () => {
   const node = document.getElementById("capture") as HTMLElement;
 
+  node.style.width = "390px";
+  node.style.height = "515px";
+
   htmlToImage
     .toPng(node)
     .then(function (dataUrl) {
