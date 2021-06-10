@@ -56,7 +56,11 @@ const selectableTeams = [
   portugal,
 ];
 
-const FlagContainer = styled.div``;
+const FlagContainer = styled.div`
+  img {
+    height: 36px !important;
+  }
+`;
 
 export const CountryChooser = ({
   setSelectedTeam,
@@ -85,11 +89,7 @@ export const CountryChooser = ({
             }}
           >
             <FlagContainer>
-              <FlagIcon
-                code={team.flagCode}
-                size={48}
-                style={{ height: "36px" }}
-              />
+              <FlagIcon code={team.flagCode} size={48} />
             </FlagContainer>
             <MenuListText>{team.name}</MenuListText>
           </MenuListItem>
