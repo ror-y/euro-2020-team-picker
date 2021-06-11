@@ -37,7 +37,7 @@ const Formation = styled.div`
   background-color: #fff;
   padding: 0 5px;
   z-index: 10;
-  min-width: 45px;
+  min-width: 55px;
 `;
 
 export const BigTeamTitle = ({
