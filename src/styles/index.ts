@@ -11,7 +11,7 @@ export const StyledPitch = styled.div`
     rgb(76, 134, 33)
   );
   background-size: 100% 119px;
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   height: 100%;
 `;
 

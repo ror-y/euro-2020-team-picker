@@ -2,7 +2,7 @@ import { StyledPitch } from "../styles";
 import { Formation } from "../types";
 import styled from "styled-components";
 
-const lineColor = "rgb(255, 255, 255)";
+const lineColor = "rgba(255, 255, 255, 0.5)";
 
 const MiddleLine = styled.div`
   width: 100%;
