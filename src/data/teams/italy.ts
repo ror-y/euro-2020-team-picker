@@ -33,7 +33,7 @@ export const italy: TeamFromWiki = {
     { name: "Rafael Tolói", squadNumber: 25, positions: [Positions.DF] },
     { name: "Manuel Locatelli", squadNumber: 5, positions: [Positions.MF] },
     { name: "Marco Verratti", squadNumber: 6, positions: [Positions.MF] },
-    { name: "Lorenzo Pellegrini", squadNumber: 7, positions: [Positions.MF] },
+    { name: "Gaetano Castrovilli", squadNumber: 7, positions: [Positions.MF] },
     { name: "Jorginho", squadNumber: 8, positions: [Positions.MF] },
     { name: "Matteo Pessina", squadNumber: 12, positions: [Positions.MF] },
     { name: "Federico Chiesa", squadNumber: 14, positions: [Positions.MF] },

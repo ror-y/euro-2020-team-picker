@@ -48,8 +48,18 @@ export const hungary: TeamFromWiki = {
       squadNumber: 11,
       positions: [Positions.FW, Positions.MF],
     },
-    { name: "Roland Varga", squadNumber: 17, positions: [Positions.FW] },
-    { name: "Kevin Varga", squadNumber: 19, positions: [Positions.FW] },
+    {
+      name: "Roland Varga",
+      squadNumber: 17,
+      positions: [Positions.FW],
+      displayName: "R. Varga",
+    },
+    {
+      name: "Kevin Varga",
+      squadNumber: 19,
+      positions: [Positions.FW],
+      displayName: "K. Varga",
+    },
     {
       name: "Roland Sallai",
       squadNumber: 20,

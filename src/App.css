@@ -76,6 +76,10 @@ body {
   #image-receiver img {
     max-width: 100%;
   }
+
+  .accordion__panel {
+    padding: 20px !important;
+  }
 }
 
 #image-receiver img {
