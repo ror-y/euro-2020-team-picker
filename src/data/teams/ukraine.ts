@@ -4,9 +4,9 @@ export const ukraine: TeamFromWiki = {
   name: "Ukraine",
   flagCode: "UA",
   colors: {
-    shirtMainColor: "rgb(245, 227, 58)",
-    shirtNumberColor: "rgb(47, 46, 121)",
-    shirtRimColor: "rgb(47, 46, 121)",
+    shirtMainColor: "rgb(47, 46, 121)",
+    shirtNumberColor: "rgb(245, 227, 58)",
+    shirtRimColor: "rgb(245, 227, 58)",
     titleColor: "rgb(47, 46, 121)",
   },
   players: [
