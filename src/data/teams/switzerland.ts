@@ -12,7 +12,7 @@ export const switzerland: TeamFromWiki = {
   players: [
     { name: "Yann Sommer", squadNumber: 1, positions: [Positions.GK] },
     { name: "Yvon Mvogo", squadNumber: 12, positions: [Positions.GK] },
-    { name: "Jonas Omlin", squadNumber: 21, positions: [Positions.GK] },
+    { name: "Gregor Kobel", squadNumber: 21, positions: [Positions.GK] },
     { name: "Kevin Mbabu", squadNumber: 2, positions: [Positions.DF] },
     { name: "Silvan Widmer", squadNumber: 3, positions: [Positions.DF] },
     { name: "Nico Elvedi", squadNumber: 4, positions: [Positions.DF] },
