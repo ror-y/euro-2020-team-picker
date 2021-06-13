@@ -22,7 +22,7 @@ export const portugal: TeamFromWiki = {
     { name: "Rúben Dias", squadNumber: 4, positions: [Positions.DF] },
     { name: "Raphaël Guerreiro", squadNumber: 5, positions: [Positions.DF] },
     { name: "José Fonte", squadNumber: 6, positions: [Positions.DF] },
-    { name: "João Cancelo", squadNumber: 20, positions: [Positions.DF] },
+    { name: "Diogo Dalot", squadNumber: 20, positions: [Positions.DF] },
     { name: "Nuno Mendes", squadNumber: 25, positions: [Positions.DF] },
     {
       name: "João Moutinho",
